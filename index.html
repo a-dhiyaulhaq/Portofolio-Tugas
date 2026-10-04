@@ -27,38 +27,52 @@
 <body class="bg-space text-white min-h-screen relative overflow-x-hidden font-sans">
 
     <!-- Background Stars & Particles -->
-    <div id="stars-container" class="fixed inset-0 pointer-events-none z-0"></div>
+    <div id="aurora-container" aria-hidden="true"></div>
+    <div id="stars-container" class="fixed inset-0 pointer-events-none z-0" aria-hidden="true"></div>
 
-  <!-- Navbar / Header -->
-<header class="flex items-center justify-center px-4 pt-4 pb-2 max-w-7xl mx-auto relative z-20">
-    <!-- Kotak Oval Navbar dirapengin dan dideketin ke Welcome -->
-    <div class="flex items-center justify-between w-full max-w-5xl px-8 py-3 rounded-full bg-blue-950/70 border border-blue-500/30 backdrop-blur-md shadow-lg shadow-blue-950/50">
-        <!-- Logo SpaceDev -->
-        <a href="#" class="inline-flex items-center text-xl md:text-2xl font-extrabold tracking-tight text-white whitespace-nowrap">
-            Space<span class="text-accent">Dev.</span>
-        </a>
-        
-        <!-- Menu Navigasi -->
-        <nav class="hidden md:flex items-center gap-6 md:gap-8 text-sm md:text-base font-medium text-gray-300">
-            <a href="#home" class="hover:text-accent transition-colors">Home</a>
-            <a href="#about" class="hover:text-accent transition-colors">About</a>
-            <a href="#education" class="hover:text-accent transition-colors">Education</a>
-            <a href="#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
-            <a href="#Materials" class="hover:text-accent transition-colors">Materials</a>
-            <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
-        </nav>
-    </div>
-</header>
+    <header class="relative z-20 px-4 pt-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-start">
+            <div class="aduz-brand">
+                <a href="#hero" class="aduz-logo" aria-label="ADUZ - kembali ke halaman utama">
+                    <span class="aduz-logo-orbit" aria-hidden="true"></span>
+                    <span class="aduz-logo-text">ADUZ</span>
+                </a>
+                <span class="aduz-brand-label">IS Students</span>
+            </div>
+
+            <button
+                id="hamburger-btn"
+                type="button"
+                class="text-white text-2xl focus:outline-none focus:ring-2 focus:ring-accent rounded-lg p-2"
+                aria-label="Buka menu navigasi"
+                aria-controls="nav-menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <nav id="nav-menu" aria-label="Navigasi utama" class="hidden flex-col items-stretch gap-2 text-sm md:text-base font-medium absolute right-4 top-full w-64 z-50">
+                <a href="#hero" class="inline-flex items-center justify-center text-xl font-extrabold tracking-wider">
+                    Space<span class="text-accent">Dev.</span>
+                </a>
+                <a href="#hero" class="hover:text-accent transition-colors py-2 w-full text-center">Home</a>
+                <a href="#about" class="hover:text-accent transition-colors py-2 w-full text-center">About</a>
+                <a href="#education" class="hover:text-accent transition-colors py-2 w-full text-center">Education</a>
+                <a href="#portfolio" class="hover:text-accent transition-colors py-2 w-full text-center">Portfolio</a>
+                <a href="#Materials" class="hover:text-accent transition-colors py-2 w-full text-center">Materials</a>
+                <a href="#contact" class="hover:text-accent transition-colors py-2 w-full text-center">Contact</a>
+            </nav>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 relative z-10">
-        <div class="inline-block p-[1px] rounded-full bg-gradient-to-r from-accent to-purple-600 mb-6 shadow-[0_0_15px_rgba(44,103,237,0.5)]">
-            <span class="block px-4 py-1.5 rounded-full bg-card text-xs font-semibold tracking-wide text-blue-300">
-                ✨ WELCOME TO MY website ✨
+        <div class="welcome-badge inline-block p-[2px] rounded-full bg-gradient-to-r from-accent to-purple-600 mb-6">
+            <span class="welcome-badge-content block px-7 py-3 rounded-full text-lg md:text-xl font-semibold tracking-wide text-blue-300">
+                ✨ WELCOME TO MY WEBSITE ✨
             </span>
         </div>
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4">
-            Halo, Saya <span class="bg-gradient-to-r from-blue-400 via-accent to-purple-500 bg-clip-text text-transparent">Amjad Dhiya Ulhaq Zamri</span>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4" aria-label="Halo, Saya Amjad Dhiya Ulhaq Zamri">
+            Halo, Saya <span id="name-typing-text" class="name-typing-text bg-gradient-to-r from-blue-400 via-accent to-purple-500 bg-clip-text text-transparent" aria-hidden="true">Amjad Dhiya Ulhaq Zamri</span>
         </h1>
         <div class="text-xl md:text-3xl font-mono text-gray-300 h-10 flex items-center justify-center">
             <span id="typing-text" class="border-r-2 border-accent pr-1 animate-pulse"></span>
@@ -212,13 +226,13 @@
     <div class="space-y-8">
         
   <!-- Tombol Materi 1 -->
-<button class="materi-btn" onclick="toggleMateri('materi1')">
+<button type="button" class="materi-btn" aria-controls="materi1" aria-expanded="false" onclick="toggleMateri('materi1')">
     Materi 1
     <div class="sub-text">Rangkuman materi 1</div>
 </button>
 
 <!-- Konten Rangkuman Materi 1 -->
-<div id="materi1" class="content-box" style="display: none;">
+<div id="materi1" class="content-box" hidden>
     <h3>Modul 1 - Introducing Today's Technologies</h3>
     <ul>
         <li><strong>Literasi Digital:</strong> Pemahaman mendasar tentang cara kerja komputer, perangkat seluler, web, dan teknologi terkait.</li>
@@ -266,13 +280,13 @@
 </div>
         
     <!-- Tombol Materi 2 -->
-<button class="materi-btn" onclick="toggleMateri('materi2')">
+<button type="button" class="materi-btn" aria-controls="materi2" aria-expanded="false" onclick="toggleMateri('materi2')">
     Materi 2
     <div class="sub-text">Rangkuman materi 2</div>
 </button>
 
 <!-- Konten Rangkuman Materi 2 -->
-<div id="materi2" class="content-box">
+<div id="materi2" class="content-box" hidden>
     <h3>Modul 2 - Connecting and Communicating Online</h3>
     <ul>
         <li><strong>Internet & Sejarah:</strong> Kumpulan jaringan global yang bermula dari ARPANET (1969) untuk berbagi data dan menjaga ketahanan komunikasi saat bencana.</li>
@@ -284,18 +298,6 @@
 </div>
 
 
-
-<!-- Konten Rangkuman Materi 2 -->
-<div id="materi2" class="content-box">
-    <h3>Modul 2 - Connecting and Communicating Online</h3>
-    <ul>
-        <li><strong>Internet & Sejarah:</strong> Kumpulan jaringan global yang bermula dari ARPANET (1969) untuk berbagi data dan menjaga ketahanan komunikasi saat bencana.</li>
-        <li><strong>Koneksi & World Wide Web:</strong> Koneksi terbagi menjadi kabel (wired) dan nirkabel (wireless), di mana web server mengirimkan halaman web ke browser pengguna.</li>
-        <li><strong>Jenis Website:</strong> Terdiri dari search engine, jejaring sosial, situs informasi, e-commerce, media sharing, hingga platform edukasi dan bisnis.</li>
-        <li><strong>Digital Media & Layanan:</strong> Memadukan multimedia (grafik, audio, video, VR) serta layanan seperti email, VoIP, dan FTP.</li>
-        <li><strong>Netiket (Etika Online):</strong> Aturan komunikasi yang menekankan kesopanan, menghindari huruf kapital semua (berteriak), serta menjaga interaksi yang sehat.</li>
-    </ul>
-</div>
 
      <!-- Contact Section -->
 <section id="contact" class="py-16 px-6 max-w-xl mx-auto relative z-10 text-center">
@@ -323,35 +325,64 @@
     <footer class="py-6 text-center text-xs text-gray-500 border-t border-accent/10 relative z-10">
         © 2026 Amjad Dhiya Ulhaq Zamri. Built with Space Theme.
     </footer>
+        <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
 
-    <!-- Custom Script -->
-    <script src="script.js"></script>
-    <script>
-    const hamburger = document.querySelector('.hamburger-btn');
-    const navLinks = document.querySelector('.nav-links');
+    if (hamburgerBtn && navMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+        const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+        hamburgerBtn.setAttribute('aria-expanded', String(!isExpanded));
+        hamburgerBtn.setAttribute('aria-label', isExpanded ? 'Buka menu navigasi' : 'Tutup menu navigasi');
+        navMenu.classList.toggle('hidden', isExpanded);
+        navMenu.classList.toggle('flex', !isExpanded);
+    });
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
+    navMenu.addEventListener('click', (event) => {
+        if (event.target.closest('a')) {
+            navMenu.classList.add('hidden');
+            navMenu.classList.remove('flex');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+            hamburgerBtn.setAttribute('aria-label', 'Buka menu navigasi');
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && hamburgerBtn.getAttribute('aria-expanded') === 'true') {
+            navMenu.classList.add('hidden');
+            navMenu.classList.remove('flex');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+            hamburgerBtn.setAttribute('aria-label', 'Buka menu navigasi');
+            hamburgerBtn.focus();
+        }
+    });
     }
-</script>
-    <script>
-    function toggleMateri(id) {
-        const selectedContent = document.getElementById(id);
-        const buttons = document.querySelectorAll('.materi-btn');
-        const contents = document.querySelectorAll('.content-box');
 
-        const isActive = selectedContent.style.display === 'block';
+    function toggleMateri(materiId) {
+        const content = document.getElementById(materiId);
+        const button = document.querySelector(`.materi-btn[aria-controls="${materiId}"]`);
 
-        contents.forEach(box => box.style.display = 'none');
-        buttons.forEach(btn => btn.classList.remove('active'));
+        if (!content || !button) {
+            console.error(`Materi tidak ditemukan: ${materiId}`);
+            return;
+        }
 
-        if (!isActive) {
-            selectedContent.style.display = 'block';
-            event.currentTarget.classList.add('active');
+        const shouldOpen = content.hidden;
+        document.querySelectorAll('.content-box').forEach((item) => {
+            item.hidden = true;
+        });
+        document.querySelectorAll('.materi-btn').forEach((item) => {
+            item.setAttribute('aria-expanded', 'false');
+            item.classList.remove('active');
+        });
+
+        if (shouldOpen) {
+            content.hidden = false;
+            button.setAttribute('aria-expanded', 'true');
+            button.classList.add('active');
         }
     }
-</script>
-</body>
+       </script>
+    <script src="script.js"></script>
+    </body>
 </html>

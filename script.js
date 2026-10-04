@@ -4,6 +4,7 @@ let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 const typingElement = document.getElementById("typing-text");
+const nameTypingElement = document.getElementById("name-typing-text");
 
 function typeEffect() {
     const currentWord = words[wordIndex];
@@ -28,6 +29,31 @@ function typeEffect() {
     }
 
     setTimeout(typeEffect, typingSpeed);
+}
+
+function typeNameEffect() {
+    if (!nameTypingElement) {
+        return;
+    }
+
+    const name = nameTypingElement.textContent;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        return;
+    }
+
+    nameTypingElement.textContent = "";
+    let charIndex = 0;
+
+    function typeNextCharacter() {
+        nameTypingElement.textContent = name.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex < name.length) {
+            setTimeout(typeNextCharacter, 85);
+        }
+    }
+
+    typeNextCharacter();
 }
 
 // --- 2. Dynamic Background Stars Generator ---
@@ -84,5 +110,6 @@ function handleFormSubmit(event) {
 // Initialize functions when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
+    typeNameEffect();
     createStars();
 });

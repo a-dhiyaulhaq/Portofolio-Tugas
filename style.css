@@ -8,6 +8,69 @@
 }
 
 /* Background Stars Keyframes Animation */
+#aurora-container {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: min(55vh, 520px);
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.55;
+    mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent 100%);
+}
+
+#aurora-container::before,
+#aurora-container::after {
+    position: absolute;
+    top: -65%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    border-radius: 50%;
+    filter: blur(55px);
+    content: "";
+    will-change: transform;
+}
+
+#aurora-container::before {
+    background: linear-gradient(
+        115deg,
+        transparent 28%,
+        rgba(28, 150, 255, 0.18) 42%,
+        rgba(69, 91, 255, 0.3) 50%,
+        rgba(151, 58, 255, 0.2) 58%,
+        transparent 72%
+    );
+    animation: aurora-drift 18s ease-in-out infinite alternate;
+}
+
+#aurora-container::after {
+    background: linear-gradient(
+        70deg,
+        transparent 34%,
+        rgba(0, 220, 255, 0.13) 46%,
+        rgba(114, 65, 255, 0.18) 54%,
+        transparent 68%
+    );
+    animation: aurora-drift 24s ease-in-out -8s infinite alternate-reverse;
+}
+
+@keyframes aurora-drift {
+    from {
+        transform: translate3d(-5%, -2%, 0) rotate(-8deg) scale(1);
+    }
+    to {
+        transform: translate3d(5%, 4%, 0) rotate(8deg) scale(1.12);
+    }
+}
+
+#stars-container {
+    z-index: 1;
+}
+
 @keyframes starPulse {
     0%, 100% {
         opacity: 0.2;
@@ -24,6 +87,42 @@
     background-color: #ffffff;
     border-radius: 50%;
     animation: starPulse infinite ease-in-out;
+}
+
+.name-typing-text {
+    border-right: 0.07em solid #93c5fd;
+    padding-right: 0.08em;
+    animation: typewriterCaret 0.8s steps(1) infinite;
+}
+
+@keyframes typewriterCaret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.welcome-badge {
+    border-radius: 9999px;
+    box-shadow: 0 0 20px rgba(44, 103, 237, 0.35);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.welcome-badge-content {
+    background: rgba(11, 15, 25, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(147, 197, 253, 0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.welcome-badge:hover {
+    box-shadow: 0 0 18px rgba(44, 103, 237, 0.85), 0 0 38px rgba(168, 85, 247, 0.65);
+    transform: translateY(-2px);
+}
+
+.welcome-badge:hover .welcome-badge-content {
+    background: rgba(30, 41, 59, 0.72);
+    border-color: rgba(147, 197, 253, 0.65);
 }
 
 /* Smooth Scrolling */
@@ -79,6 +178,10 @@ html {
     text-align: left;
 }
 
+.content-box:not([hidden]) {
+    display: block;
+}
+
 .content-box h3 {
     color: #00d2ff;
     font-size: 18px;
@@ -100,60 +203,138 @@ html {
     margin-bottom: 0;
 }
 /* =========================================
-   HAMBURGER MENU UNTUK TAMPILAN HP
+   GAYA UNTUK HAMBURGER MENU & DROPDOWN NAVBAR
    ========================================= */
 
-/* Sembunyikan tombol hamburger di tampilan laptop/desktop */
-.hamburger-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
+/* Styling tambahan untuk menu dropdown saat dibuka di HP / Laptop */
+#nav-menu {
+    background-color: rgba(22, 27, 34, 0.95) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid #30363d !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-/* Pengaturan Responsif untuk Layar HP */
-@media (max-width: 768px) {
-    /* Buat navbar utama jadi sejajar (Logo di kiri, Tombol Hamburger di kanan) */
-    .navbar, nav, .nav-container {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        flex-wrap: wrap !important;
-        width: 90% !important;
-        max-width: 400px !important;
-        margin: 0 auto !important;
-        padding: 12px 20px !important;
+/* Styling untuk setiap link di dalam menu hamburger */
+#nav-menu a {
+    color: #c9d1d9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#nav-menu a:hover {
+    background-color: rgba(0, 210, 255, 0.1);
+    color: #00d2ff;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+/* Tombol Hamburger (Ikon 3 Garis) */
+#hamburger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#hamburger-btn:active {
+    transform: scale(0.9);
+}
+
+.aduz-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: 5px;
+}
+
+.aduz-brand-label {
+    color: #cbd5e1;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.aduz-logo {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    flex: 0 0 76px;
+    width: 76px;
+    height: 76px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    border: 1px solid rgba(96, 165, 250, 0.65);
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #172554, #080d1b 72%);
+    box-shadow: 0 0 18px rgba(44, 103, 237, 0.35), inset 0 0 12px rgba(44, 103, 237, 0.2);
+    text-decoration: none;
+    animation: aduz-float 4s ease-in-out infinite;
+}
+
+.aduz-logo-text {
+    color: #dbeafe;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
+}
+
+.aduz-logo-orbit {
+    position: absolute;
+    z-index: -1;
+    inset: 10px -9px;
+    border: 1px solid rgba(168, 85, 247, 0.75);
+    border-radius: 50%;
+    transform: rotate(-32deg);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.35);
+}
+
+.aduz-logo-orbit::after {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #a855f7;
+    box-shadow: 0 0 8px #a855f7;
+    content: "";
+}
+
+.aduz-logo:hover {
+    box-shadow: 0 0 26px rgba(44, 103, 237, 0.6), inset 0 0 14px rgba(44, 103, 237, 0.3);
+}
+
+@keyframes aduz-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aduz-logo,
+    .name-typing-text,
+    .welcome-badge,
+    #aurora-container::before,
+    #aurora-container::after {
+        animation: none;
+        transition: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .aduz-brand {
+        gap: 12px;
     }
 
-    /* Tampilkan tombol hamburger di HP */
-    .hamburger-btn {
-        display: block !important;
-    }
-
-    /* Sembunyikan menu navigasi secara *default* di HP sebelum tombol diklik */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        margin-top: 15px;
-        gap: 10px;
-        background-color: rgba(22, 27, 34, 0.95);
-        padding: 15px;
-        border-radius: 12px;
-        border: 1px solid #30363d;
-    }
-
-    /* Kelas aktif untuk memunculkan menu saat hamburger diklik */
-    .nav-links.show {
-        display: flex !important;
-    }
-
-    .nav-links a, .nav-links button, .tab-btn {
-        width: 100%;
-        padding: 10px;
-        font-size: 14px;
+    .aduz-brand-label {
+        font-size: 15px;
     }
 }
