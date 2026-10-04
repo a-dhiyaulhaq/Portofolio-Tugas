@@ -127,47 +127,43 @@ html {
         flex-shrink: 0;
     }
 }
-/* =========================================
-   PERBAIKAN NAVBAR RESPONSIF UNTUK HP
-   ========================================= */
-
-/* Pastikan kontainer navigasi atas tampil flex/sejajar */
-nav, .navbar, .nav-container, header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-/* Pengaturan khusus untuk layar HP (maksimal lebar 768px) */
+/* Pengaturan Navbar agar tetap rapi berjejer & bisa di-scroll horizontal di HP */
 @media (max-width: 768px) {
-    /* Membuat menu navigasi bisa digeser ke samping (horizontal scroll) */
-    nav, .navbar, .nav-container, .nav-links {
-        display: flex !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
-        width: 100% !important;
-        padding: 10px 5px !important;
-        justify-content: flex-start !important;
-        gap: 8px !important;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+    /* Perkecil ukuran kontainer navbar utama di HP agar pas */
+    .navbar, nav, .nav-container {
+        max-width: 95% !important;
+        padding: 8px 12px !important;
     }
 
-    /* Hilangkan scrollbar di Chrome, Safari, Edge */
-    nav::-webkit-scrollbar, 
-    .navbar::-webkit-scrollbar, 
-    .nav-container::-webkit-scrollbar, 
-    .nav-links::-webkit-scrollbar {
+    /* Atur logo SpaceDev dan menu agar fleksibel ke samping */
+    .navbar, nav {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        scrollbar-width: none; /* Hilangkan scrollbar */
+    }
+
+    /* Hilangkan scrollbar untuk Chrome/Safari */
+    .navbar::-webkit-scrollbar, nav::-webkit-scrollbar {
         display: none !important;
     }
 
-    /* Mengecilkan ukuran tombol/link menu agar pas dan rapi di layar HP */
-    nav a, nav button, .navbar a, .navbar button, .nav-links a, .nav-links button, .tab-btn {
-        font-size: 12px !important;
-        padding: 6px 10px !important;
+    /* Susun link menu (Home, About, dll) agar sejajar ke samping */
+    .nav-links {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+    }
+
+    /* Perkecil sedikit ukuran teks menu di HP biar muat banyak */
+    .nav-links a, .nav-links button, .tab-btn {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
         flex-shrink: 0 !important;
-        display: inline-block !important;
     }
 }
