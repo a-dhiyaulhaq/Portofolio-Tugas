@@ -30,3 +30,100 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* Style Tombol Materi */
+.materi-btn {
+    background: linear-gradient(135deg, #1f4068, #162447);
+    color: white;
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.materi-btn:hover {
+    border-color: #00d2ff;
+    box-shadow: 0 0 10px #00d2ff;
+}
+
+.materi-btn.active {
+    background: #00d2ff;
+    color: #0d1117;
+    box-shadow: 0 0 15px #00d2ff, 0 0 30px #00d2ff;
+    border-color: #00d2ff;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #b0c4de;
+    margin-top: 4px;
+    font-weight: normal;
+}
+
+.content-box {
+    display: none;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.content-box h3 {
+    color: #00d2ff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.content-box ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.content-box li {
+    font-size: 14px;
+    color: #c9d1d9;
+    margin-bottom: 2em; 
+}
+
+.content-box li:last-child {
+    margin-bottom: 0;
+}
+/* Pengaturan Navigasi untuk Tampilan HP (Responsive Mobile) */
+@media (max-width: 768px) {
+    /* Membuat container navigasi bisa digeser ke samping (horizontal scrolling) */
+    .nav-links, .floating-nav, nav {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        padding: 8px 10px;
+        justify-content: flex-start;
+        gap: 8px;
+        scrollbar-width: none; /* Menghilangkan scrollbar di Firefox */
+    }
+
+    /* Menghilangkan scrollbar di Chrome/Safari */
+    .nav-links::-webkit-scrollbar, 
+    .floating-nav::-webkit-scrollbar, 
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Menyesuaikan ukuran tombol/link menu agar pas di layar HP */
+    .nav-links a, .nav-links button, .tab-btn {
+        font-size: 13px;
+        padding: 6px 12px;
+        flex-shrink: 0;
+    }
+}
