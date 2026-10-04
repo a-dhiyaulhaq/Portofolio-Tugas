@@ -127,3 +127,47 @@ html {
         flex-shrink: 0;
     }
 }
+/* =========================================
+   PERBAIKAN NAVBAR RESPONSIF UNTUK HP
+   ========================================= */
+
+/* Pastikan kontainer navigasi atas tampil flex/sejajar */
+nav, .navbar, .nav-container, header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Pengaturan khusus untuk layar HP (maksimal lebar 768px) */
+@media (max-width: 768px) {
+    /* Membuat menu navigasi bisa digeser ke samping (horizontal scroll) */
+    nav, .navbar, .nav-container, .nav-links {
+        display: flex !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        width: 100% !important;
+        padding: 10px 5px !important;
+        justify-content: flex-start !important;
+        gap: 8px !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+    }
+
+    /* Hilangkan scrollbar di Chrome, Safari, Edge */
+    nav::-webkit-scrollbar, 
+    .navbar::-webkit-scrollbar, 
+    .nav-container::-webkit-scrollbar, 
+    .nav-links::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Mengecilkan ukuran tombol/link menu agar pas dan rapi di layar HP */
+    nav a, nav button, .navbar a, .navbar button, .nav-links a, .nav-links button, .tab-btn {
+        font-size: 12px !important;
+        padding: 6px 10px !important;
+        flex-shrink: 0 !important;
+        display: inline-block !important;
+    }
+}
