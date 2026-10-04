@@ -99,71 +99,61 @@ html {
 .content-box li:last-child {
     margin-bottom: 0;
 }
-/* Pengaturan Navigasi untuk Tampilan HP (Responsive Mobile) */
-@media (max-width: 768px) {
-    /* Membuat container navigasi bisa digeser ke samping (horizontal scrolling) */
-    .nav-links, .floating-nav, nav {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        width: 100%;
-        padding: 8px 10px;
-        justify-content: flex-start;
-        gap: 8px;
-        scrollbar-width: none; /* Menghilangkan scrollbar di Firefox */
-    }
+/* =========================================
+   HAMBURGER MENU UNTUK TAMPILAN HP
+   ========================================= */
 
-    /* Menghilangkan scrollbar di Chrome/Safari */
-    .nav-links::-webkit-scrollbar, 
-    .floating-nav::-webkit-scrollbar, 
-    nav::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Menyesuaikan ukuran tombol/link menu agar pas di layar HP */
-    .nav-links a, .nav-links button, .tab-btn {
-        font-size: 13px;
-        padding: 6px 12px;
-        flex-shrink: 0;
-    }
+/* Sembunyikan tombol hamburger di tampilan laptop/desktop */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
 }
-/* Pengaturan Navbar agar tetap rapi berjejer & bisa di-scroll horizontal di HP */
+
+/* Pengaturan Responsif untuk Layar HP */
 @media (max-width: 768px) {
-    /* Perkecil ukuran kontainer navbar utama di HP agar pas */
+    /* Buat navbar utama jadi sejajar (Logo di kiri, Tombol Hamburger di kanan) */
     .navbar, nav, .nav-container {
-        max-width: 95% !important;
-        padding: 8px 12px !important;
-    }
-
-    /* Atur logo SpaceDev dan menu agar fleksibel ke samping */
-    .navbar, nav {
         display: flex !important;
-        flex-direction: row !important;
-        align-items: center !important;
         justify-content: space-between !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
-        scrollbar-width: none; /* Hilangkan scrollbar */
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        width: 90% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        padding: 12px 20px !important;
     }
 
-    /* Hilangkan scrollbar untuk Chrome/Safari */
-    .navbar::-webkit-scrollbar, nav::-webkit-scrollbar {
-        display: none !important;
+    /* Tampilkan tombol hamburger di HP */
+    .hamburger-btn {
+        display: block !important;
     }
 
-    /* Susun link menu (Home, About, dll) agar sejajar ke samping */
+    /* Sembunyikan menu navigasi secara *default* di HP sebelum tombol diklik */
     .nav-links {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 8px !important;
-        overflow-x: auto !important;
-        white-space: nowrap !important;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        gap: 10px;
+        background-color: rgba(22, 27, 34, 0.95);
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #30363d;
     }
 
-    /* Perkecil sedikit ukuran teks menu di HP biar muat banyak */
+    /* Kelas aktif untuk memunculkan menu saat hamburger diklik */
+    .nav-links.show {
+        display: flex !important;
+    }
+
     .nav-links a, .nav-links button, .tab-btn {
-        font-size: 11px !important;
-        padding: 4px 8px !important;
-        flex-shrink: 0 !important;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
     }
 }
