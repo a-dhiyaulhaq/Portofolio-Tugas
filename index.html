@@ -207,30 +207,95 @@
     <h2 class="text-3xl font-bold text-center mb-4">
         Course <span class="text-accent">Materials</span>
     </h2>
-    <p class="text-gray-400 text-center text-sm mb-12">Rangkuman Materi #1 & #2 - Tren Teknologi Informasi</p>
+    <p class="text-gray-400 text-center text-sm mb-12">Rangkuman Materi 1 & 2 - Tren Teknologi Informasi</p>
     
     <div class="space-y-8">
         
-        <!-- Materi #1 -->
-        <div class="bg-card/70 p-6 md:p-8 rounded-2xl border border-accent/20">
-            <span class="text-xs text-accent font-semibold px-3 py-1 bg-accent/10 rounded-full">MATERI #1</span>
-            <h3 class="text-xl font-bold text-white mt-3 mb-2">Pengantar Tren Teknologi Informasi</h3>
-            <p class="text-gray-300 text-sm leading-relaxed">
-                Materi pertama membahas dasar-dasar perkembangan teknologi informasi di era digital, bagaimana sistem komputer dan jaringan bekerja, serta pengenalan tren teknologi masa kini yang mengubah cara manusia berinteraksi dan mengelola data.
-            </p>
-        </div>
+  <!-- Tombol Materi 1 -->
+<button class="materi-btn" onclick="toggleMateri('materi1')">
+    Materi 1
+    <div class="sub-text">Rangkuman materi 1</div>
+</button>
 
-        <!-- Materi #2 -->
-        <div class="bg-card/70 p-6 md:p-8 rounded-2xl border border-accent/20">
-            <span class="text-xs text-accent font-semibold px-3 py-1 bg-accent/10 rounded-full">MATERI #2</span>
-            <h3 class="text-xl font-bold text-white mt-3 mb-2">Evolusi dan Infrastruktur Digital</h3>
-            <p class="text-gray-300 text-sm leading-relaxed">
-                Materi kedua berfokus pada infrastruktur pendukung teknologi modern, pengenalan media penyimpanan digital, arsitektur data, serta komponen-komponen penting yang membentuk ekosistem sistem informasi saat ini.
-            </p>
-        </div>
+<!-- Konten Rangkuman Materi 1 -->
+<div id="materi1" class="content-box" style="display: none;">
+    <h3>Modul 1 - Introducing Today's Technologies</h3>
+    <ul>
+        <li><strong>Literasi Digital:</strong> Pemahaman mendasar tentang cara kerja komputer, perangkat seluler, web, dan teknologi terkait.</li>
+        <li><strong>Pemrosesan Data:</strong> Komputer memproses data mentah menjadi informasi yang bermakna melalui tahapan input, proses, output, dan penyimpanan (storage).</li>
+        <li><strong>Internet dan Web:</strong> Internet merupakan jaringan komputer global, sedangkan web adalah sekumpulan halaman elektronik yang diakses menggunakan browser.</li>
+        <li><strong>Risiko & Isu Teknologi:</strong> Mencakup ancaman keamanan seperti virus/malware, pentingnya menjaga privasi, kesehatan pengguna, serta kepedulian terhadap lingkungan (green computing).</li>
+    </ul>
 
-    </div>
-</section>
+    <h3>Modul 2 - Connecting and Communicating Online</h3>
+    <ul>
+        <li><strong>Sejarah Singkat:</strong> Internet berawal dari ARPANET (1969) yang dibuat untuk berbagi informasi antar ilmuwan dan dirancang agar tetap berfungsi meskipun sebagian jaringan rusak.</li>
+        <li><strong>Koneksi & Alamat:</strong> Koneksi internet dapat menggunakan kabel maupun nirkabel (wireless), di mana alamat IP komputer dipetakan ke dalam bentuk nama domain.</li>
+        <li><strong>Komponen Web:</strong> Terdiri dari web server, browser, homepage, serta berbagai layanan komunikasi online lainnya.</li>
+    </ul>
+
+    <h3>Modul 3 - Computers and Mobile Devices</h3>
+    <ul>
+        <li>Membahas jenis-jenis perangkat keras (hardware) seperti komputer personal, laptop, tablet, dan smartphone.</li>
+        <li>Memahami perbedaan fungsi serta spesifikasi dasar perangkat yang digunakan untuk komputasi sehari-hari.</li>
+    </ul>
+
+    <h3>Modul 4 - Programs and Apps</h3>
+    <ul>
+        <li>Mempelajari kategori perangkat lunak (software), yang dibagi menjadi software sistem (sistem operasi) dan aplikasi produktivitas.</li>
+        <li>Mengetahui pentingnya pengelolaan aplikasi, lisensi, dan pembaruan perangkat lunak secara berkala.</li>
+    </ul>
+
+    <h3>Modul 5 - Digital Safety and Security</h3>
+    <ul>
+        <li>Fokus pada pencegahan kejahatan siber (cybercrime), pencurian identitas, dan penggunaan kata sandi yang aman.</li>
+        <li>Pemanfaatan perangkat keamanan seperti antivirus, firewall, dan enkripsi data untuk perlindungan.</li>
+    </ul>
+
+    <h3>Modul 6 - Inside Computers and Mobile Devices</h3>
+    <ul>
+        <li>Mengenal komponen internal perangkat seperti CPU (Central Processing Unit), memori (RAM), dan media penyimpanan (SSD & HDD).</li>
+        <li>Memahami cara kerja komponen dalam mengeksekusi instruksi program di dalam sistem.</li>
+    </ul>
+
+    <h3>Modul 7 - Storage</h3>
+    <ul>
+        <li>Mempelajari berbagai media penyimpanan data, baik penyimpanan internal, eksternal, maupun berbasis cloud storage.</li>
+        <li>Mengetahui perbandingan kapasitas, kecepatan, dan ketahanan dari berbagai media penyimpanan digital.</li>
+    </ul>
+</div>
+        
+    <!-- Tombol Materi 2 -->
+<button class="materi-btn" onclick="toggleMateri('materi2')">
+    Materi 2
+    <div class="sub-text">Rangkuman materi 2</div>
+</button>
+
+<!-- Konten Rangkuman Materi 2 -->
+<div id="materi2" class="content-box">
+    <h3>Modul 2 - Connecting and Communicating Online</h3>
+    <ul>
+        <li><strong>Internet & Sejarah:</strong> Kumpulan jaringan global yang bermula dari ARPANET (1969) untuk berbagi data dan menjaga ketahanan komunikasi saat bencana.</li>
+        <li><strong>Koneksi & World Wide Web:</strong> Koneksi terbagi menjadi kabel (wired) dan nirkabel (wireless), di mana web server mengirimkan halaman web ke browser pengguna.</li>
+        <li><strong>Jenis Website:</strong> Terdiri dari search engine, jejaring sosial, situs informasi, e-commerce, media sharing, hingga platform edukasi dan bisnis.</li>
+        <li><strong>Digital Media & Layanan:</strong> Memadukan multimedia (grafik, audio, video, VR) serta layanan seperti email, VoIP, dan FTP.</li>
+        <li><strong>Netiket (Etika Online):</strong> Aturan komunikasi yang menekankan kesopanan, menghindari huruf kapital semua (berteriak), serta menjaga interaksi yang sehat.</li>
+    </ul>
+</div>
+
+
+
+<!-- Konten Rangkuman Materi 2 -->
+<div id="materi2" class="content-box">
+    <h3>Modul 2 - Connecting and Communicating Online</h3>
+    <ul>
+        <li><strong>Internet & Sejarah:</strong> Kumpulan jaringan global yang bermula dari ARPANET (1969) untuk berbagi data dan menjaga ketahanan komunikasi saat bencana.</li>
+        <li><strong>Koneksi & World Wide Web:</strong> Koneksi terbagi menjadi kabel (wired) dan nirkabel (wireless), di mana web server mengirimkan halaman web ke browser pengguna.</li>
+        <li><strong>Jenis Website:</strong> Terdiri dari search engine, jejaring sosial, situs informasi, e-commerce, media sharing, hingga platform edukasi dan bisnis.</li>
+        <li><strong>Digital Media & Layanan:</strong> Memadukan multimedia (grafik, audio, video, VR) serta layanan seperti email, VoIP, dan FTP.</li>
+        <li><strong>Netiket (Etika Online):</strong> Aturan komunikasi yang menekankan kesopanan, menghindari huruf kapital semua (berteriak), serta menjaga interaksi yang sehat.</li>
+    </ul>
+</div>
 
      <!-- Contact Section -->
 <section id="contact" class="py-16 px-6 max-w-xl mx-auto relative z-10 text-center">
@@ -261,5 +326,22 @@
 
     <!-- Custom Script -->
     <script src="script.js"></script>
+    <script>
+    function toggleMateri(id) {
+        const selectedContent = document.getElementById(id);
+        const buttons = document.querySelectorAll('.materi-btn');
+        const contents = document.querySelectorAll('.content-box');
+
+        const isActive = selectedContent.style.display === 'block';
+
+        contents.forEach(box => box.style.display = 'none');
+        buttons.forEach(btn => btn.classList.remove('active'));
+
+        if (!isActive) {
+            selectedContent.style.display = 'block';
+            event.currentTarget.classList.add('active');
+        }
+    }
+</script>
 </body>
 </html>
