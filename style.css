@@ -257,6 +257,20 @@ html {
     white-space: nowrap;
 }
 
+.aduz-brand-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aduz-clock {
+    color: #93c5fd;
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
 .aduz-logo {
     position: relative;
     isolation: isolate;
@@ -336,5 +350,9 @@ html {
 
     .aduz-brand-label {
         font-size: 15px;
+    }
+
+    .aduz-clock {
+        font-size: 14px;
     }
 }

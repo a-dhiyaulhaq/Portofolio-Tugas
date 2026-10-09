@@ -80,6 +80,18 @@ function createStars() {
     }
 }
 
+function updateDigitalClock() {
+    const clockElement = document.getElementById("digital-clock");
+    if (!clockElement) {
+        return;
+    }
+
+    const now = new Date();
+    const pad = (value) => String(value).padStart(2, "0");
+    clockElement.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+    clockElement.dateTime = now.toISOString();
+}
+
 // --- 3. Portfolio Tab Switcher ---
 function switchTab(tabName) {
     // Hide all tab contents
@@ -112,4 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
     typeNameEffect();
     createStars();
+    updateDigitalClock();
+    setInterval(updateDigitalClock, 1000);
 });
