@@ -5,6 +5,8 @@ let charIndex = 0;
 let isDeleting = false;
 const typingElement = document.getElementById("typing-text");
 const nameTypingElement = document.getElementById("name-typing-text");
+const mobileViewport = window.matchMedia("(max-width: 768px)");
+let lastStarViewportIsMobile = mobileViewport.matches;
 
 function typeEffect() {
     const currentWord = words[wordIndex];
@@ -59,7 +61,8 @@ function typeNameEffect() {
 // --- 2. Dynamic Background Stars Generator ---
 function createStars() {
     const starsContainer = document.getElementById("stars-container");
-    const starCount = 80;
+    const starCount = mobileViewport.matches ? 28 : 80;
+    starsContainer.replaceChildren();
 
     for (let i = 0; i < starCount; i++) {
         const star = document.createElement("div");
@@ -124,6 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
     typeNameEffect();
     createStars();
+    window.addEventListener("resize", () => {
+        const isMobile = mobileViewport.matches;
+        if (isMobile !== lastStarViewportIsMobile) {
+            lastStarViewportIsMobile = isMobile;
+            createStars();
+        }
+    });
     updateDigitalClock();
     setInterval(updateDigitalClock, 1000);
 });

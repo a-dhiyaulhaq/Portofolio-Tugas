@@ -1,5 +1,16 @@
 /* Custom CSS styling for Space Theme */
 
+body {
+    background-color: #030712;
+    background-image:
+        radial-gradient(ellipse at top, rgba(30, 64, 175, 0.18), transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(88, 28, 135, 0.12), transparent 45%);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 /* Custom Active Tab Class */
 .tab-btn.active {
     background-color: #2c67ed;
@@ -321,6 +332,62 @@ html {
 
 .aduz-logo:hover {
     box-shadow: 0 0 26px rgba(44, 103, 237, 0.6), inset 0 0 14px rgba(44, 103, 237, 0.3);
+}
+
+.learning-tech-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.learning-tech-item {
+    display: flex;
+    min-height: 108px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    border-radius: 16px;
+    background: rgba(22, 27, 34, 0.65);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.learning-tech-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 210, 255, 0.75);
+}
+
+.learning-tech-name {
+    color: #93c5fd;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.learning-tech-description {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    #aurora-container::before,
+    #aurora-container::after {
+        animation: none;
+        filter: none;
+        will-change: auto;
+    }
+
+    .star {
+        animation: none;
+        opacity: 0.7;
+    }
 }
 
 @keyframes aduz-float {
