@@ -5,8 +5,6 @@ let charIndex = 0;
 let isDeleting = false;
 const typingElement = document.getElementById("typing-text");
 const nameTypingElement = document.getElementById("name-typing-text");
-const mobileViewport = window.matchMedia("(max-width: 768px)");
-let lastStarViewportIsMobile = mobileViewport.matches;
 
 function typeEffect() {
     const currentWord = words[wordIndex];
@@ -58,31 +56,6 @@ function typeNameEffect() {
     typeNextCharacter();
 }
 
-// --- 2. Dynamic Background Stars Generator ---
-function createStars() {
-    const starsContainer = document.getElementById("stars-container");
-    const starCount = mobileViewport.matches ? 28 : 80;
-    starsContainer.replaceChildren();
-
-    for (let i = 0; i < starCount; i++) {
-        const star = document.createElement("div");
-        star.classList.add("star");
-
-        // Random positions and sizes
-        const size = Math.random() * 3 + 1;
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
-
-        // Random animation delay & duration
-        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        star.style.animationDelay = `${Math.random() * 3}s`;
-
-        starsContainer.appendChild(star);
-    }
-}
-
 function updateDigitalClock() {
     const clockElement = document.getElementById("digital-clock");
     if (!clockElement) {
@@ -93,6 +66,166 @@ function updateDigitalClock() {
     const pad = (value) => String(value).padStart(2, "0");
     clockElement.textContent = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
     clockElement.dateTime = now.toISOString();
+}
+
+function initializeMemoryGame() {
+    const trigger = document.getElementById("memory-game-trigger");
+    const modal = document.getElementById("memory-game-modal");
+    const closeButton = document.getElementById("memory-game-close");
+    const levelLabel = document.getElementById("memory-game-level");
+    const statusLabel = document.getElementById("memory-game-status");
+    const restartButton = document.getElementById("memory-game-restart");
+    const tiles = Array.from(document.querySelectorAll(".memory-tile"));
+
+    if (!trigger || !modal || !closeButton || !levelLabel || !statusLabel || !restartButton || tiles.length !== 4) {
+        console.error("Memory Game tidak dapat dimulai: elemen game tidak lengkap.");
+        return;
+    }
+
+    let level = 1;
+    let sequence = [];
+    let inputIndex = 0;
+    let acceptingInput = false;
+    let gameTimers = [];
+
+    function schedule(callback, delay) {
+        const timer = window.setTimeout(() => {
+            gameTimers = gameTimers.filter((activeTimer) => activeTimer !== timer);
+            callback();
+        }, delay);
+        gameTimers.push(timer);
+    }
+
+    function clearGameTimers() {
+        gameTimers.forEach((timer) => window.clearTimeout(timer));
+        gameTimers = [];
+        tiles.forEach((tile) => tile.classList.remove("is-lit"));
+    }
+
+    function setInputEnabled(enabled) {
+        acceptingInput = enabled;
+        tiles.forEach((tile) => {
+            tile.disabled = !enabled;
+        });
+    }
+
+    function playSequence(index = 0) {
+        if (index >= sequence.length) {
+            schedule(() => {
+                setInputEnabled(true);
+                statusLabel.textContent = "Giliran Anda. Ulangi urutan kotaknya.";
+            }, 250);
+            return;
+        }
+
+        schedule(() => {
+            const tile = tiles[sequence[index]];
+            tile.classList.add("is-lit");
+            schedule(() => {
+                tile.classList.remove("is-lit");
+                schedule(() => playSequence(index + 1), 140);
+            }, 240);
+        }, index === 0 ? 300 : 0);
+    }
+
+    function startLevel() {
+        clearGameTimers();
+        sequence = Array.from({ length: level + 2 }, () => Math.floor(Math.random() * tiles.length));
+        inputIndex = 0;
+        levelLabel.textContent = `Level: ${level} / 50`;
+        statusLabel.textContent = "Perhatikan urutan kotak...";
+        restartButton.hidden = true;
+        setInputEnabled(false);
+        playSequence();
+    }
+
+    function endGame(won) {
+        setInputEnabled(false);
+        if (won) {
+            statusLabel.textContent = "Luar biasa! Semua 50 level berhasil diselesaikan.";
+            restartButton.textContent = "Main Lagi dari Level 1";
+        } else {
+            statusLabel.textContent = `Game over di Level ${level}. Coba ingat polanya sekali lagi.`;
+            restartButton.textContent = "Ulangi dari Level 1";
+        }
+        restartButton.hidden = false;
+    }
+
+    function handleTileInput(event) {
+        if (!acceptingInput) {
+            return;
+        }
+
+        const selectedTile = Number(event.currentTarget.dataset.tile);
+        if (selectedTile !== sequence[inputIndex]) {
+            endGame(false);
+            return;
+        }
+
+        const tile = event.currentTarget;
+        tile.classList.add("is-lit");
+        schedule(() => tile.classList.remove("is-lit"), 160);
+        inputIndex++;
+
+        if (inputIndex === sequence.length) {
+            setInputEnabled(false);
+            if (level === 50) {
+                endGame(true);
+                return;
+            }
+
+            level++;
+            levelLabel.textContent = `Level: ${level} / 50`;
+            statusLabel.textContent = "Benar! Bersiap untuk level berikutnya...";
+            schedule(startLevel, 700);
+        }
+    }
+
+    function openGame() {
+        const navMenu = document.getElementById("nav-menu");
+        const hamburgerButton = document.getElementById("hamburger-btn");
+        if (navMenu && hamburgerButton) {
+            navMenu.classList.add("hidden");
+            navMenu.classList.remove("flex");
+            hamburgerButton.setAttribute("aria-expanded", "false");
+            hamburgerButton.setAttribute("aria-label", "Buka menu navigasi");
+        }
+
+        modal.hidden = false;
+        document.body.classList.add("memory-game-open");
+        level = 1;
+        closeButton.focus();
+        startLevel();
+    }
+
+    function closeGame() {
+        clearGameTimers();
+        setInputEnabled(false);
+        modal.hidden = true;
+        document.body.classList.remove("memory-game-open");
+        const hamburgerButton = document.getElementById("hamburger-btn");
+        if (hamburgerButton) {
+            hamburgerButton.focus();
+        }
+    }
+
+    trigger.addEventListener("click", openGame);
+    closeButton.addEventListener("click", closeGame);
+    restartButton.addEventListener("click", () => {
+        level = 1;
+        startLevel();
+    });
+    tiles.forEach((tile) => tile.addEventListener("click", handleTileInput));
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeGame();
+        }
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) {
+            closeGame();
+        }
+    });
 }
 
 // --- 3. Portfolio Tab Switcher ---
@@ -126,14 +259,7 @@ function handleFormSubmit(event) {
 document.addEventListener("DOMContentLoaded", () => {
     typeEffect();
     typeNameEffect();
-    createStars();
-    window.addEventListener("resize", () => {
-        const isMobile = mobileViewport.matches;
-        if (isMobile !== lastStarViewportIsMobile) {
-            lastStarViewportIsMobile = isMobile;
-            createStars();
-        }
-    });
     updateDigitalClock();
     setInterval(updateDigitalClock, 1000);
+    initializeMemoryGame();
 });

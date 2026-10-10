@@ -26,9 +26,27 @@
 </head>
 <body class="bg-space text-white min-h-screen relative overflow-x-hidden font-sans">
 
-    <!-- Background Stars & Particles -->
+    <!-- Background aurora and shooting stars -->
     <div id="aurora-container" aria-hidden="true"></div>
-    <div id="stars-container" class="fixed inset-0 pointer-events-none z-0" aria-hidden="true"></div>
+    <div id="stars-container" aria-hidden="true">
+        <span class="twinkle-star twinkle-star-1"></span>
+        <span class="twinkle-star twinkle-star-2"></span>
+        <span class="twinkle-star twinkle-star-3"></span>
+        <span class="twinkle-star twinkle-star-4"></span>
+        <span class="twinkle-star twinkle-star-5"></span>
+        <span class="twinkle-star twinkle-star-6"></span>
+        <span class="twinkle-star twinkle-star-7"></span>
+        <span class="twinkle-star twinkle-star-8"></span>
+        <span class="twinkle-star twinkle-star-9"></span>
+        <span class="twinkle-star twinkle-star-10"></span>
+        <span class="twinkle-star twinkle-star-11"></span>
+        <span class="twinkle-star twinkle-star-12"></span>
+        <span class="shooting-star shooting-star-1"></span>
+        <span class="shooting-star shooting-star-2"></span>
+        <span class="shooting-star shooting-star-3"></span>
+        <span class="shooting-star shooting-star-4"></span>
+        <span class="shooting-star shooting-star-5"></span>
+    </div>
 
     <header class="relative z-20 px-4 pt-4">
         <div class="max-w-6xl mx-auto flex justify-between items-start">
@@ -62,6 +80,7 @@
                 <a href="#education" class="hover:text-accent transition-colors py-2 w-full text-center">Education</a>
                 <a href="#portfolio" class="hover:text-accent transition-colors py-2 w-full text-center">Portfolio</a>
                 <a href="#Materials" class="hover:text-accent transition-colors py-2 w-full text-center">Materials</a>
+                <button id="memory-game-trigger" type="button" class="memory-game-trigger">Memory Game 🧠</button>
                 <a href="#contact" class="hover:text-accent transition-colors py-2 w-full text-center">Contact</a>
             </nav>
         </div>
@@ -338,6 +357,23 @@
     <footer class="py-6 text-center text-xs text-gray-500 border-t border-accent/10 relative z-10">
         © 2026 Amjad Dhiya Ulhaq Zamri. Built with Space Theme.
     </footer>
+
+    <div id="memory-game-modal" class="memory-modal" role="dialog" aria-modal="true" aria-labelledby="memory-game-title" aria-describedby="memory-game-status" hidden>
+        <div class="memory-game-panel">
+            <button id="memory-game-close" class="memory-game-close" type="button" aria-label="Tutup Memory Game">×</button>
+            <h2 id="memory-game-title" class="memory-game-title">Pattern Memory</h2>
+            <p id="memory-game-level" class="memory-game-level">Level: 1 / 50</p>
+            <p id="memory-game-status" class="memory-game-status" aria-live="polite">Perhatikan urutan kotak, lalu ulangi dengan mengetuknya.</p>
+            <div class="memory-game-board" aria-label="Papan permainan">
+                <button class="memory-tile memory-tile-red" type="button" data-tile="0" aria-label="Merah" disabled></button>
+                <button class="memory-tile memory-tile-blue" type="button" data-tile="1" aria-label="Biru" disabled></button>
+                <button class="memory-tile memory-tile-green" type="button" data-tile="2" aria-label="Hijau" disabled></button>
+                <button class="memory-tile memory-tile-yellow" type="button" data-tile="3" aria-label="Kuning" disabled></button>
+            </div>
+            <button id="memory-game-restart" class="memory-game-restart" type="button" hidden>Ulangi dari Level 1</button>
+        </div>
+    </div>
+
         <script>
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
@@ -352,7 +388,7 @@
     });
 
     navMenu.addEventListener('click', (event) => {
-        if (event.target.closest('a')) {
+        if (event.target.closest('a, #memory-game-trigger')) {
             navMenu.classList.add('hidden');
             navMenu.classList.remove('flex');
             hamburgerBtn.setAttribute('aria-expanded', 'false');
