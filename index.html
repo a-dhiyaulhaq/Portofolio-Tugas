@@ -72,15 +72,11 @@
             </button>
 
             <nav id="nav-menu" aria-label="Navigasi utama" class="hidden flex-col items-stretch gap-2 text-sm md:text-base font-medium absolute right-4 top-full w-64 z-50">
-                <a href="#hero" class="inline-flex items-center justify-center text-xl font-extrabold tracking-wider">
-                    Space<span class="text-accent">Dev.</span>
-                </a>
                 <a href="#hero" class="hover:text-accent transition-colors py-2 w-full text-center">Home</a>
                 <a href="#about" class="hover:text-accent transition-colors py-2 w-full text-center">About</a>
                 <a href="#education" class="hover:text-accent transition-colors py-2 w-full text-center">Education</a>
                 <a href="#portfolio" class="hover:text-accent transition-colors py-2 w-full text-center">Portfolio</a>
                 <a href="#Materials" class="hover:text-accent transition-colors py-2 w-full text-center">Materials</a>
-                <button id="memory-game-trigger" type="button" class="memory-game-trigger">Memory Game 🧠</button>
                 <a href="#contact" class="hover:text-accent transition-colors py-2 w-full text-center">Contact</a>
             </nav>
         </div>
@@ -160,29 +156,33 @@
     
     <div class="space-y-8 relative before:absolute before:inset-0 before:left-3 before:w-0.5 before:bg-accent/30">
         
-        <!-- Item 1: SMP (Pondok Pesantren Al-Gontory) -->
+        <!-- Item 1: SMP (Pondok Pesantren Al-Amanah Al-Gontory) -->
         <div class="relative pl-8">
             <div class="absolute left-1.5 -translate-x-1/2 top-1.5 w-3 h-3 bg-gray-600 rounded-full border-4 border-bg-space"></div>
-            <span class="text-xs text-gray-400 font-semibold px-2.5 py-1 bg-gray-800 rounded-full">SMP</span>
-            <h3 class="text-xl font-bold text-white mt-2">Pondok Pesantren Al-Gontory</h3>
-            <p class="text-gray-400 text-sm">Santri / Pelajar</p>
+            <span class="text-xs text-gray-400 font-semibold px-2.5 py-1 bg-gray-800 rounded-full">PESANTREN 2020 - 2023</span>
+            <h3 class="text-xl font-bold text-white mt-2">Pondok Pesantren Al-Amanah Al-Gontory</h3>
+            <p class="text-gray-400 text-sm">Santri</p>
             <p class="text-gray-400 text-xs mt-1">Menjalani masa pendidikan menengah pertama sambil aktif mengikuti kegiatan muhadharah serta belajar bahasa Arab dan Inggris.</p>
         </div>
 
         <!-- Item 2: SMA (SMA Hang Tuah 1) -->
         <div class="relative pl-8">
             <div class="absolute left-1.5 -translate-x-1/2 top-1.5 w-3 h-3 bg-gray-600 rounded-full border-4 border-bg-space"></div>
-            <span class="text-xs text-gray-400 font-semibold px-2.5 py-1 bg-gray-800 rounded-full">2024 - 2026</span>
+            <span class="text-xs text-gray-400 font-semibold px-2.5 py-1 bg-gray-800 rounded-full">SMA 2024 - 2026</span>
             <h3 class="text-xl font-bold text-white mt-2">SMA Hang Tuah 1</h3>
-            <p class="text-gray-400 text-sm">Alumni / Lulusan SMA</p>
-            <p class="text-gray-400 text-xs mt-1">Menyelesaikan masa studi sekolah menengah atas sebelum melanjutkan ke jenjang perguruan tinggi.</p>
+            <p class="text-gray-400 text-sm">Siswa</p>
+            <p class="text-gray-400 text-xs mt-1">Masa SMA gua mungkin nggak seseru bocah-bocah yang nongkrong tiap malam, tapi kalau diingat-ingat lagi, kocak juga. Gua dulu mutusin buat masuk Rohis. Tapi ya namanya gw cuma gabut, gw di sana udah kayak boch yg ikut2 doang, kadang ikut kumpul kalau lagi niat, kadang ngilang langsung balik. 
+
+Dan gua di catet ama guru gw, untuk ikut lomba pidato yang di adakan sama sekolah, asli nya gw ga mau cok, tapi ujung-ujungnya ikut juga. Ters ada Ketentuannya minimal harus tampil tiga menit lebih. Pas hari-H, saking groginya gw jadi lupa ama yang di pelajari waktu itu, ters baru jalan dua menit gua udah turun panggung sambil cengar-cengir doang, wkwk. 
+
+Hasil lombanya? Ya jelas kalah. Tapi, gua dapet pelajaran dan pengalaman mahal banget soal keberanian yang nggak bakal gua dapetin kalau cuma jadi penonton doang</p>
         </div>
 
         <!-- Item 3: Kuliah (Universitas Budi Luhur) -->
         <div class="relative pl-8">
             <div class="absolute left-1.5 -translate-x-1/2 top-1.5 w-3 h-3 bg-accent rounded-full border-4 border-bg-space"></div>
-            <span class="text-xs text-accent font-semibold px-2.5 py-1 bg-accent/10 rounded-full">2026 - Present</span>
-            <h3 class="text-xl font-bold text-white mt-2">S1 - Sistem Informasi</h3>
+            <span class="text-xs text-accent font-semibold px-2.5 py-1 bg-accent/10 rounded-full">MAHASISWA BARU 2026 - Present</span>
+            <h3 class="text-xl font-bold text-white mt-2">Sistem Informasi</h3>
             <p class="text-gray-400 text-sm">Universitas Budi Luhur</p>
             <p class="text-gray-400 text-xs mt-1">Memulai perjalanan kuliah sebagai mahasiswa baru, aktif mendalami dasar-dasar teknologi dan pemrograman.</p>
         </div>
@@ -264,50 +264,84 @@
 </button>
 
 <!-- Konten Rangkuman Materi 1 -->
-<div id="materi1" class="content-box" hidden>
-    <h3>Modul 1 - Introducing Today's Technologies</h3>
+<div id="materi1" class="content-box">
+    <h3>Modul 01 - Introducing Today's Technologies: Computers, Devices, and the Web</h3>
     <ul>
-        <li><strong>Literasi Digital:</strong> Pemahaman mendasar tentang cara kerja komputer, perangkat seluler, web, dan teknologi terkait.</li>
-        <li><strong>Pemrosesan Data:</strong> Komputer memproses data mentah menjadi informasi yang bermakna melalui tahapan input, proses, output, dan penyimpanan (storage).</li>
-        <li><strong>Internet dan Web:</strong> Internet merupakan jaringan komputer global, sedangkan web adalah sekumpulan halaman elektronik yang diakses menggunakan browser.</li>
-        <li><strong>Risiko & Isu Teknologi:</strong> Mencakup ancaman keamanan seperti virus/malware, pentingnya menjaga privasi, kesehatan pengguna, serta kepedulian terhadap lingkungan (green computing).</li>
-    </ul>
+        <li><strong>Pendahuluan & Literasi Digital:</strong> Seiring cepatnya perkembangan teknologi, penting untuk memiliki <strong>Literasi Digital (Digital Literacy)</strong>, yaitu pemahaman mendasar dan pengetahuan mengenai cara kerja komputer, perangkat seluler, web, serta teknologi terkait yang digunakan dalam kehidupan sehari-hari.</li>
+        
+        <li><strong>1. Types of Computers (Jenis-jenis Komputer):</strong>
+            <ul>
+                <li><strong>Computer:</strong> Perangkat elektronik yang beroperasi di bawah kendali instruksi yang tersimpan dalam memorinya sendiri.</li>
+                <li><strong>Laptop:</strong> Komputer portabel yang mudah dibawa kemana saja, dilengkapi layar, keyboard, dan touchpad terintegrasi.</li>
+                <li><strong>Tablet:</strong> Perangkat seluler tipis berlayar sentuh (touchscreen) tanpa keyboard fisik utama.</li>
+                <li><strong>Desktop & All-in-One:</strong> Komputer stasioner yang dirancang untuk diletakkan di satu tempat. Desktop memiliki casing tower terpisah dari monitor, sedangkan <em>All-in-One</em> mengintegrasikan komponen mesin langsung ke dalam casing layar.</li>
+                <li><strong>Server:</strong> Komputer berkapasitas tinggi yang menyediakan layanan, menyimpan data, serta mengelola sumber daya jaringan bagi komputer lain (client).</li>
+            </ul>
+        </li>
 
-    <h3>Modul 2 - Connecting and Communicating Online</h3>
-    <ul>
-        <li><strong>Sejarah Singkat:</strong> Internet berawal dari ARPANET (1969) yang dibuat untuk berbagi informasi antar ilmuwan dan dirancang agar tetap berfungsi meskipun sebagian jaringan rusak.</li>
-        <li><strong>Koneksi & Alamat:</strong> Koneksi internet dapat menggunakan kabel maupun nirkabel (wireless), di mana alamat IP komputer dipetakan ke dalam bentuk nama domain.</li>
-        <li><strong>Komponen Web:</strong> Terdiri dari web server, browser, homepage, serta berbagai layanan komunikasi online lainnya.</li>
-    </ul>
+        <li><strong>2. Mobile and Game Devices (Perangkat Seluler & Game):</strong>
+            <ul>
+                <li><strong>Smartphone:</strong> Telepon genggam pintar berfitur internet, kamera, aplikasi, dan touch screen.</li>
+                <li><strong>Digital Camera:</strong> Perangkat untuk mengambil dan menyimpan foto atau video secara digital.</li>
+                <li><strong>Portable & Digital Media Player:</strong> Perangkat portabel untuk mendengarkan musik, menonton video, dan melihat foto digital.</li>
+                <li><strong>E-Book Reader:</strong> Perangkat genggam yang dirancang khusus untuk membaca buku elektronik (digital).</li>
+                <li><strong>Wearable Device:</strong> Perangkat komputasi kecil yang dapat dikenakan di tubuh (seperti smartwatch dan fitness tracker).</li>
+                <li><strong>Game Device:</strong> Konsol atau perangkat portabel yang dirancang khusus untuk bermain video game interaktif.</li>
+            </ul>
+        </li>
 
-    <h3>Modul 3 - Computers and Mobile Devices</h3>
-    <ul>
-        <li>Membahas jenis-jenis perangkat keras (hardware) seperti komputer personal, laptop, tablet, dan smartphone.</li>
-        <li>Memahami perbedaan fungsi serta spesifikasi dasar perangkat yang digunakan untuk komputasi sehari-hari.</li>
-    </ul>
+        <li><strong>3. Data and Information (Siklus Pengolahan Data):</strong>
+            <ul>
+                <li><strong>Data:</strong> Kumpulan item mentah yang belum diproses, dapat berupa teks, angka, gambar, audio, maupun video.</li>
+                <li><strong>Information (Informasi):</strong> Hasil dari data yang telah diolah sehingga menyampaikan makna dan berguna bagi pengguna dalam mengambil keputusan.</li>
+                <li><strong>Proses Pengolahan:</strong> Komputer bekerja dengan menerima data mentah (<strong>Input</strong>), melakukan pemrosesan (<strong>Processing</strong>), menghasilkan keluaran bermanfaat (<strong>Output</strong>), serta menyimpannya (<strong>Storage</strong>) untuk penggunaan masa depan.</li>
+            </ul>
+        </li>
 
-    <h3>Modul 4 - Programs and Apps</h3>
-    <ul>
-        <li>Mempelajari kategori perangkat lunak (software), yang dibagi menjadi software sistem (sistem operasi) dan aplikasi produktivitas.</li>
-        <li>Mengetahui pentingnya pengelolaan aplikasi, lisensi, dan pembaruan perangkat lunak secara berkala.</li>
-    </ul>
+        <li><strong>4. The Web, Internet, and Tools:</strong>
+            <ul>
+                <li><strong>Internet:</strong> Jaringan komputer global terbesar di dunia yang menghubungkan jutaan bisnis, pemerintah, lembaga pendidikan, dan individu.</li>
+                <li><strong>Web & Webpage:</strong> Layanan global di dalam internet yang berisi dokumen/halaman web interaktif.</li>
+                <li><strong>Browser:</strong> Perangkat lunak yang digunakan untuk mengakses dan menampilkan halaman web (contoh: Chrome, Edge, Safari).</li>
+                <li><strong>Search Engine:</strong> Alat atau perangkat lunak pencari untuk menemukan situs web, berita, gambar, peta, dan informasi spesifik berdasarkan kata kunci tertentu.</li>
+                <li><strong>Online Social Networks:</strong> Platform digital yang memungkinkan pengguna berbagi informasi, ide, materi media, dan berkomunikasi dengan orang lain secara online.</li>
+            </ul>
+        </li>
 
-    <h3>Modul 5 - Digital Safety and Security</h3>
-    <ul>
-        <li>Fokus pada pencegahan kejahatan siber (cybercrime), pencurian identitas, dan penggunaan kata sandi yang aman.</li>
-        <li>Pemanfaatan perangkat keamanan seperti antivirus, firewall, dan enkripsi data untuk perlindungan.</li>
-    </ul>
+        <li><strong>5. Digital Security, Privacy, and Environment:</strong>
+            <ul>
+                <li><strong>Viruses & Malware:</strong> Program jahat yang dirancang untuk mengganggu, merusak, atau mengambil alih operasional komputer tanpa izin.</li>
+                <li><strong>Privacy:</strong> Tantangan menjaga kerahasiaan data pribadi dari pengumpulan dan penyalahgunaan pihak tak bertanggung jawab di internet.</li>
+                <li><strong>Health Concerns:</strong> Penggunaan teknologi berlebihan dapat menimbulkan gangguan kesehatan mental (kecanduan) dan fisik (seperti cedera mata atau postur tubuh).</li>
+                <li><strong>Green Computing (Isu Lingkungan):</strong> Upaya mengurangi konsumsi listrik dan limbah lingkungan akibat penggunaan teknologi.
+                    <ul>
+                        <li><em>Strategi Green Computing:</em> Daur ulang komponen bekas, menggunakan perangkat hemat energi, mengatur manufaktur ramah lingkungan, memperpanjang masa pakai komputer, dan mendonasikan atau membuang komputer lama dengan benar.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
 
-    <h3>Modul 6 - Inside Computers and Mobile Devices</h3>
-    <ul>
-        <li>Mengenal komponen internal perangkat seperti CPU (Central Processing Unit), memori (RAM), dan media penyimpanan (SSD & HDD).</li>
-        <li>Memahami cara kerja komponen dalam mengeksekusi instruksi program di dalam sistem.</li>
-    </ul>
+        <li><strong>6. Programs and Apps (Sistem & Aplikasi):</strong>
+            <ul>
+                <li><strong>Software / Program:</strong> Serangkaian instruksi terstruktur yang memberi tahu komputer apa yang harus dilakukan dan bagaimana cara melakukannya.</li>
+                <li><strong>System Software:</strong> Perangkat lunak sistem yang mengelola dan mengontrol operasional hardware, terdiri dari <strong>Operating System (OS)</strong> (seperti Windows, macOS, Android) dan <strong>Tools/Utilities</strong>.</li>
+                <li><strong>Applications (Apps):</strong> Program yang dirancang khusus untuk membantu pengguna menyelesaikan tugas tertentu (seperti Microsoft Office, browser, game, dan editor foto).</li>
+            </ul>
+        </li>
 
-    <h3>Modul 7 - Storage</h3>
-    <ul>
-        <li>Mempelajari berbagai media penyimpanan data, baik penyimpanan internal, eksternal, maupun berbasis cloud storage.</li>
-        <li>Mengetahui perbandingan kapasitas, kecepatan, dan ketahanan dari berbagai media penyimpanan digital.</li>
+        <li><strong>7. Communications and Networks:</strong>
+            <ul>
+                <li><strong>Communications Device:</strong> Perangkat keras yang berfungsi mentransfer data, instruksi, dan informasi antara komputer ke media transmisi (seperti modem dan router).</li>
+                <li><strong>Teknologi Nirkabel:</strong> Komunikasi data tanpa kabel menggunakan gelombang radio seperti <em>Wi-Fi, Bluetooth,</em> dan <em>Cellular Radio</em>.</li>
+                <li><strong>Network (Jaringan):</strong> Kumpulan komputer dan perangkat yang terhubung bersama (baik dengan kabel maupun nirkabel) untuk saling berbagi sumber daya, data, dan informasi.</li>
+            </ul>
+        </li>
+
+        <li><strong>8. Technology Uses in Society (Penerapan Teknologi):</strong>
+            <ul>
+                <li>Penggunaan teknologi informasi telah mencakup berbagai bidang utama masyarakat, yaitu: <strong>Education (Pendidikan), Government (Pemerintahan), Finance (Keuangan), Retail (Perdagangan), Entertainment (Hiburan), Health Care (Kesehatan), Science (Sains), Travel (Perjalanan), Publishing (Penerbitan),</strong> dan <strong>Manufacturing (Manufaktur)</strong>.</li>
+            </ul>
+        </li>
     </ul>
 </div>
         
@@ -319,13 +353,68 @@
 
 <!-- Konten Rangkuman Materi 2 -->
 <div id="materi2" class="content-box" hidden>
-    <h3>Modul 2 - Connecting and Communicating Online</h3>
+    <h3>Modul 02 - Connecting and Communicating Online: The Internet, Websites, and Media</h3>
     <ul>
-        <li><strong>Internet & Sejarah:</strong> Kumpulan jaringan global yang bermula dari ARPANET (1969) untuk berbagi data dan menjaga ketahanan komunikasi saat bencana.</li>
-        <li><strong>Koneksi & World Wide Web:</strong> Koneksi terbagi menjadi kabel (wired) dan nirkabel (wireless), di mana web server mengirimkan halaman web ke browser pengguna.</li>
-        <li><strong>Jenis Website:</strong> Terdiri dari search engine, jejaring sosial, situs informasi, e-commerce, media sharing, hingga platform edukasi dan bisnis.</li>
-        <li><strong>Digital Media & Layanan:</strong> Memadukan multimedia (grafik, audio, video, VR) serta layanan seperti email, VoIP, dan FTP.</li>
-        <li><strong>Netiket (Etika Online):</strong> Aturan komunikasi yang menekankan kesopanan, menghindari huruf kapital semua (berteriak), serta menjaga interaksi yang sehat.</li>
+        <li><strong>1. Internet:</strong>
+            <ul>
+                <li>Internet adalah jaringan global yang menghubungkan jutaan bisnis, instansi pemerintah, institusi pendidikan, dan individu di seluruh dunia[cite: 31].</li>
+                <li>Berawal dari proyek <strong>ARPANET</strong> pada September 1969 dengan dua tujuan utama: memungkinkan ilmuwan berbagi informasi lintas lokasi fisik dan memastikan jaringan tetap berfungsi meskipun sebagian sistem rusak akibat bencana[cite: 31].</li>
+            </ul>
+        </li>
+        
+        <li><strong>2. Connecting to the Internet (Koneksi Internet):</strong>
+            <ul>
+                <li><strong>Koneksi Kabel (Wired):</strong> Perangkat terhubung secara fisik menggunakan kabel atau kawat ke perangkat komunikasi[cite: 31].</li>
+                <li><strong>Koneksi Nirkabel (Wireless):</strong> Perangkat tanpa kabel fisik dapat terhubung menggunakan modem nirkabel (seperti modem USB) atau teknologi Wi-Fi dan seluler[cite: 31, 32].</li>
+            </ul>
+        </li>
+
+        <li><strong>3. The World Wide Web (WWW):</strong>
+            <ul>
+                <li><strong>World Wide Web (Web):</strong> Kumpulan dokumen elektronik global yang terdiri dari halaman web (*webpage*) dan situs web (*website*)[cite: 32].</li>
+                <li><strong>Web Server:</strong> Komputer yang bertugas menyimpan dan mengirimkan halaman web yang diminta ke perangkat pengguna[cite: 32].</li>
+                <li><strong>Browser & Homepage:</strong> *Browser* adalah aplikasi untuk mengakses dan melihat halaman web (contoh: Chrome, Firefox, Safari, Edge)[cite: 32], sedangkan *homepage* adalah halaman utama yang pertama kali muncul saat sebuah situs web diakses[cite: 32].</li>
+                <li><strong>Web App & Cloud Storage:</strong> Aplikasi web diakses melalui browser yang datanya disimpan di server pusat, dikenal sebagai penyimpanan awan (*cloud storage*)[cite: 32].</li>
+            </ul>
+        </li>
+
+        <li><strong>4. Types of Websites (Macam-macam Situs Web):</strong>
+            <ul>
+                <li><strong>Search Engine & Subject Directory:</strong> Mesin pencari untuk menemukan informasi web, sedangkan direktori subjek mengklasifikasikan halaman web ke dalam kategori terorganisir[cite: 33].</li>
+                <li>Berbagai jenis situs web meliputi: <em>Search Engine, Online Social Network, Informational and Research, Media Sharing, Bookmarking, News/Weather/Sports, Educational, Business/Governmental, Blogs, Wiki and Collaboration, Health and Fitness, Science, Banking and Finance, Mapping, Travel and Tourism,</em> serta <em>Retail and Auctions</em>[cite: 34].</li>
+            </ul>
+        </li>
+
+        <li><strong>5. Digital Media On The Web:</strong>
+            <ul>
+                <li><strong>Multimedia:</strong> Aplikasi yang menggabungkan teks dengan berbagai format media digital, yaitu:
+                    <ul>
+                        <li><strong>Graphics:</strong> Tampilan visual digital.</li>
+                        <li><strong>Animation:</strong> Efek gerak pada gambar atau teks.</li>
+                        <li><strong>Audio:</strong> Suara, musik, atau rekaman digital.</li>
+                        <li><strong>Video:</strong> Rangkaian frame visual bergerak.</li>
+                        <li><strong>Virtual Reality (VR):</strong> Simulasi lingkungan tiga dimensi interaktif komputer.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><strong>6. Other Internet Services (Layanan Internet Lainnya):</strong>
+            <ul>
+                <li><strong>Email & Email List:</strong> Transmisi pesan dan file digital[cite: 35]; email list digunakan untuk distribusi pesan massal ke banyak alamat sekaligus[cite: 35].</li>
+                <li><strong>Instant Messaging & Chat:</strong> Layanan komunikasi waktu nyata (*real-time*) untuk bertukar pesan teks, file, atau bergabung dalam *chat room*[cite: 35].</li>
+                <li><strong>Online Discussion:</strong> Area diskusi terstruktur berbasis teks mengenai topik-topik tertentu[cite: 35].</li>
+                <li><strong>VoIP (Voice over IP):</strong> Teknologi yang memungkinkan pengguna melakukan percakapan suara melalui koneksi internet[cite: 36].</li>
+                <li><strong>FTP (File Transfer Protocol):</strong> Standar internet untuk proses *upload* (unggah) dan *download* (unduh) file antar komputer melalui *FTP Server*[cite: 36].</li>
+            </ul>
+        </li>
+
+        <li><strong>7. Netiquette (Etika Komunikasi Online):</strong>
+            <ul>
+                <li>Aturan sopan santun dalam komunikasi digital berpedoman pada *Golden Rule*: Perlakukan orang lain sebagaimana kamu ingin diperlakukan[cite: 36].</li>
+                <li>Poin penting netiket: Berlaku sopan, hindari bahasa kasar atau *flame* (pesan menghina), jangan menggunakan huruf kapital semua karena setara dengan BERTERIAK (*SHOUTING*), gunakan emotikon/akronim (seperti BTW, FYI, IMHO) untuk mengekspresikan nada, tandai *spoiler*, serta maklumi kesalahan orang lain[cite: 36].</li>
+            </ul>
+        </li>
     </ul>
 </div>
 
@@ -337,58 +426,88 @@
 
 <!-- Konten Rangkuman Materi 3 -->
 <div id="materi3" class="content-box" hidden>
-    <h3>Materi 3 - Computers and Mobile Devices</h3>
+    <h3>Modul 03 - Computers and Mobile Devices</h3>
     <ul>
-        <li><strong>Laptops, Tablets, and Desktops:</strong>
+        <li><strong>1. Computer and Mobile Devices (Pengantar):</strong> Membahas berbagai jenis perangkat komputasi modern yang digunakan dalam kehidupan sehari-hari, mulai dari komputer pribadi, server, perangkat seluler, perangkat game, hingga komputer tertanam (*embedded computers*)[cite: 39, 40].</li>
+        
+        <li><strong>2. Mobile Computers and Desktops:</strong>
             <ul>
-                <li><strong>Laptop (notebook computer)</strong> adalah komputer seluler yang tipis dan ringan, dengan layar di bagian penutup dan keyboard di bagian alas.</li>
-                <li><strong>Tablet</strong> adalah komputer seluler yang lebih tipis dan ringan, menggunakan layar sentuh sebagai cara utama untuk berinteraksi.</li>
-                <li><strong>Desktop</strong> dirancang untuk digunakan di lokasi stasioner, biasanya ditempatkan di atas atau di bawah meja.</li>
+                <li><strong>Mobile Computer:</strong> Komputer pribadi portabel yang dirancang agar mudah dibawa berpindah tempat oleh pengguna[cite: 40].</li>
+                <li><strong>Personal Computer (PC):</strong> Komputer bergerak atau desktop mandiri yang mampu melakukan aktivitas *input, processing, output,* dan *storage* secara mandiri serta dirancang untuk digunakan oleh satu orang dalam satu waktu[cite: 40].</li>
             </ul>
         </li>
-        <li><strong>Servers:</strong> Komputer yang didedikasikan untuk menyediakan satu atau lebih layanan kepada komputer atau perangkat lain di jaringan. Jenis server meliputi <strong>rack server, blade server,</strong> dan <strong>tower server</strong>.
+
+        <li><strong>3. Servers:</strong>
             <ul>
-                <li><strong>Mainframe</strong> adalah server berukuran besar, mahal, dan kuat yang dapat menangani ratusan hingga ribuan pengguna secara bersamaan.</li>
-                <li><strong>Supercomputer</strong> adalah komputer tercepat dan paling kuat, digunakan untuk memproses triliunan instruksi per detik.</li>
+                <li>Server adalah komputer yang didedikasikan untuk menyediakan satu atau beberapa layanan kepada komputer atau perangkat lain di dalam jaringan[cite: 40].</li>
+                <li><strong>Virtualisasi:</strong> Praktik berbagi atau menggabungkan sumber daya komputasi. *Server virtualization* menggunakan perangkat lunak agar satu server fisik dapat meniru kemampuan beberapa server virtual[cite: 40].</li>
+                <li><strong>Server Farm:</strong> Jaringan yang terdiri dari banyak server dalam satu lokasi fisik[cite: 40].</li>
+                <li>Jenis server khusus (*Dedicated Servers*) meliputi: *Application server, Backup server, Database server, Domain name server (DNS), File server, FTP server, Game server, Home server, List server, Mail server, Network server, Print server,* dan *Web server*[cite: 41].</li>
             </ul>
         </li>
-        <li><strong>Terminals:</strong> Komputer dengan kemampuan pemrosesan terbatas yang digunakan untuk mengirim dan menerima data dari server.
+
+        <li><strong>4. Terminals:</strong>
             <ul>
-                <li><strong>POS terminal</strong> digunakan toko ritel untuk mencatat pembelian dan memperbarui inventaris.</li>
-                <li><strong>ATM</strong> adalah terminal perbankan mandiri.</li>
-                <li><strong>Self-service kiosk</strong> adalah terminal mandiri dengan layar sentuh, misalnya financial, photo, ticket, vending, dan visitor kiosk.</li>
+                <li>Terminal adalah komputer dengan kekuatan pemrosesan terbatas yang memungkinkan pengguna mengirim dan menerima data dari komputer host atau server[cite: 41].</li>
+                <li><strong>Thin Client:</strong> Terminal yang menyerupai desktop namun memiliki keterbatasan komponen dan kemampuan[cite: 41].</li>
+                <li><strong>ATM (Automated Teller Machine):</strong> Terminal perbankan swalayan yang terhubung ke komputer host via jaringan[cite: 41].</li>
+                <li><strong>Kios Swalayan:</strong> Terminal mandiri yang biasanya dilengkapi layar sentuh (*touchscreen*) untuk interaksi pengguna[cite: 41].</li>
             </ul>
         </li>
-        <li><strong>Cloud Computing:</strong> Lingkungan yang menyediakan sumber daya dan layanan komputasi yang dapat diakses melalui Internet.</li>
-        <li><strong>Mobile Devices:</strong>
+
+        <li><strong>5. Supercomputers:</strong>
             <ul>
-                <li><strong>Smartphone</strong> adalah telepon berkemampuan Internet yang menjalankan berbagai aplikasi dan menggunakan keyboard layar sentuh atau keyboard geser.</li>
-                <li><strong>Digital camera</strong> menyimpan foto secara digital; kualitas gambar berkaitan dengan resolusi yang diukur dalam pixel.</li>
-                <li><strong>Portable media player</strong> memutar media digital secara portabel, sedangkan <strong>digital media player</strong> mengalirkan (streaming) media ke TV.</li>
-                <li><strong>E-book reader</strong> digunakan untuk membaca publikasi digital.</li>
-                <li><strong>Wearable devices</strong> adalah perangkat komputasi kecil yang dikenakan oleh konsumen.</li>
+                <li>Superkomputer adalah jenis komputer yang paling cepat, paling kuat, sekaligus paling mahal[cite: 42].</li>
+                <li>Mampu memproses banyak triliunan instruksi dalam waktu hanya satu detik[cite: 42].</li>
             </ul>
         </li>
-        <li><strong>Game Devices:</strong>
+
+        <li><strong>6. Cloud Computing (Komputasi Awan):</strong>
             <ul>
-                <li><strong>Game console</strong> dirancang untuk memainkan video game, baik secara tunggal maupun multiplayer.</li>
-                <li><strong>Handheld game device</strong> adalah konsol game kecil portabel yang seluruh komponennya menyatu dalam satu unit.</li>
-                <li><strong>Game controllers</strong> mencakup gamepad, joystick, wheels, dance pad, dan perangkat motion-sensing.</li>
+                <li>Mengacu pada lingkungan yang menyediakan sumber daya dan layanan komputasi (seperti penyimpanan, aplikasi, server, backup, dan database) yang dapat diakses melalui internet[cite: 42].</li>
             </ul>
         </li>
-        <li><strong>Embedded Computers:</strong> Komputer tujuan khusus yang berfungsi sebagai komponen di dalam produk yang lebih besar, seperti automobile, consumer electronics, home automation, serta process controller dan robotics.</li>
-        <li><strong>Ports and Connections:</strong> <strong>Port</strong> adalah titik tempat perangkat periferal terhubung dengan komputer untuk mengirim atau menerima data. <strong>Connector</strong> menghubungkan kabel ke port.
+
+        <li><strong>7. Mobile Devices:</strong>
             <ul>
-                <li>Contoh konektor dan port: HDMI, USB Type A/B, Micro/Mini USB, Lightning, VGA, DisplayPort, dan Thunderbolt.</li>
-                <li>Sebuah port USB dapat menghubungkan hingga 127 perangkat periferal yang berbeda.</li>
-                <li>Koneksi nirkabel menggunakan teknologi seperti Bluetooth, Wi-Fi, dan NFC.</li>
+                <li>Perangkat seluler dilengkapi berbagai metode input teks seperti *on-screen keyboard, swipe keyboard app, mini keyboard, keypad, slide out keyboard, portable keyboard, virtual keyboard,* hingga teknologi *speech to text*[cite: 43].</li>
             </ul>
         </li>
-        <li><strong>Protecting Hardware:</strong> Perangkat keras dapat dilindungi dari pencurian dengan physical access controls, alarm system, physical security devices, dan device-tracking app.
+
+        <li><strong>8. Game Devices:</strong>
+                <ul>
+                <li><strong>Konsol Game:</strong> Perangkat komputasi seluler yang dirancang khusus untuk permainan video tunggal atau *multiplayer*[cite: 44].</li>
+                <li><strong>Perangkat Game Genggam (*Handheld*):</strong> Perangkat seluler kecil yang menyatukan layar, speaker, kontrol, dan konsol dalam satu unit[cite: 44].</li>
+                <li><strong>Pengontrol Game:</strong> Meliputi *gamepad, joystick and wheels, dance pads,* hingga pengontrol berbasis sensor gerak (*motion-sensing controllers* dan *balance board*)[cite: 43, 44].</li>
+            </ul>
+        </li>
+
+        <li><strong>9. Embedded Computers (Komputer Tersemat):</strong>
             <ul>
-                <li><strong>Undervoltage</strong> dan <strong>overvoltage/power surge</strong> dapat menyebabkan kegagalan perangkat keras.</li>
-                <li><strong>Surge protector</strong> membantu menstabilkan aliran arus listrik.</li>
-                <li><strong>Uninterruptible Power Supply (UPS)</strong> menyediakan daya dari baterai ketika listrik padam.</li>
+                <li>Komputer tujuan khusus yang berfungsi sebagai komponen internal di dalam produk yang lebih besar[cite: 44].</li>
+                <li>Contoh penerapannya meliputi: elektronik konsumen, perangkat otomatisasi rumah, mobil, penerima GPS, pemutar DVD/MP3, *router nirkabel*, *set-top boxes*, konsol game, mesin fotokopi, *microwave*, hingga robot industri[cite: 44].</li>
+            </ul>
+        </li>
+
+        <li><strong>10. Ports and Connections:</strong>
+            <ul>
+                <li><strong>Port:</strong> Titik fisik atau nirkabel tempat perangkat periferal terhubung dan berkomunikasi dengan komputer/perangkat seluler untuk mengirim serta menerima data[cite: 44].</li>
+                <li>Berbagai jenis port populer meliputi: *DisplayPort, DVI, HDMI, Headphones, Lightning, Microphone, Micro USB, Mini USB, Mini HDMI, Network (Ethernet), Speaker, Thunderbolt, USB (Type A & B), VGA,* dan *Mini DisplayPort*[cite: 45].</li>
+            </ul>
+        </li>
+
+        <li><strong>11. Protecting Hardware:</strong>
+            <ul>
+                <li>Langkah-langkah pengamanan untuk mengurangi risiko pencurian dan kerusakan perangkat meliputi: *Physical access controls, alarm systems, physical security devices, security/device-tracking apps,* verifikasi identitas (seperti *fingerprint reader*), serta keharusan menunjukkan identitas[cite: 45].</li>
+            </ul>
+        </li>
+
+        <li><strong>12. Health Concerns of Using Technology (Kesehatan & Ergonomi):</strong>
+            <ul>
+                <li><strong>RSI (Repetitive Strain Injury):</strong> Gangguan atau cedera pada otot, saraf, tendon, ligamen, dan persendian akibat gerakan berulang[cite: 46].</li>
+                <li><strong>CVS (Computer Vision Syndrome):</strong> Masalah kesehatan mata yang berkaitan dengan penggunaan layar teknologi[cite: 46].</li>
+                <li><strong>Ergonomi:</strong> Ilmu terapan untuk merancang lingkungan kerja yang nyaman, efisien, dan aman (misalnya posisi duduk siku membentuk sudut 90°, jarak pandang layar 18-28 inci, kursi stabil berkaki 4-5, serta posisi kaki rata di lantai)[cite: 46].</li>
+                <li><strong>Kecanduan Teknologi:</strong> Kondisi ketika penggunaan teknologi menyita seluruh waktu dan kehidupan sosial seseorang[cite: 46].</li>
             </ul>
         </li>
     </ul>
@@ -402,42 +521,89 @@
 
 <!-- Konten Rangkuman Materi 4 -->
 <div id="materi4" class="content-box" hidden>
-    <h3>Materi 4 - Programs and Apps</h3>
+    <h3>Modul 04 - Programs and Apps</h3>
     <ul>
-        <li><strong>Program & Application:</strong> <strong>Program</strong> atau software berisi serangkaian instruksi terorganisir yang memberi tahu komputer apa yang harus dilakukan. <strong>Application (app)</strong> dirancang untuk meningkatkan produktivitas pengguna atau membantu tugas pribadi. <strong>Operating System (OS)</strong> adalah kumpulan program yang mengoordinasikan semua aktivitas perangkat keras.</li>
-        <li><strong>Software Distribution:</strong> Perangkat lunak tersedia dalam berbagai bentuk: retail, custom, web app, mobile app, mobile web app, shareware, freeware, open source, dan public domain.</li>
-        <li><strong>Productivity Applications:</strong> Aplikasi yang membantu kegiatan sehari-hari di kantor, sekolah, dan rumah, antara lain:
+        <li><strong>1. Programs and Apps (Pengantar Perangkat Lunak):</strong>
             <ul>
-                <li>Word processing, presentation, spreadsheet, database, dan note taking.</li>
-                <li>Calendar/contact management, project management, accounting, dan personal finance.</li>
-                <li>Legal, tax preparation, document management, dan enterprise computing.</li>
-            </ul>
-            Siklus pengerjaan project umumnya meliputi <strong>Create, Edit, Format, Save,</strong> dan <strong>Distribute</strong>.
-        </li>
-        <li><strong>Graphics and Media Software:</strong> Perangkat lunak untuk membuat, mengelola, atau menikmati visual dan multimedia, meliputi computer-aided design (CAD), desktop publishing, paint/image editing, photo editing/management, video/audio editing, multimedia authoring, website authoring, media player, dan disc burning software.</li>
-        <li><strong>Personal Interest & Communications Applications:</strong>
-            <ul>
-                <li>Aplikasi minat pribadi mencakup lifestyle, medical, entertainment, convenience, dan education.</li>
-                <li>Aplikasi komunikasi mencakup blog, browsing, chat, online discussion, email, file transfer, Internet phone, instant/mobile messaging, videoconference, dan web feeds.</li>
+                <li><strong>Program / Software:</strong> Serangkaian instruksi terkait yang disusun untuk tujuan bersama guna memberi tahu komputer mengenai tugas apa yang harus dilakukan dan cara melakukannya[cite: 50].</li>
+                <li><strong>App / Aplikasi:</strong> Perangkat lunak aplikasi yang dirancang untuk membuat pengguna lebih produktif dan/atau membantu menyelesaikan tugas-tugas pribadi[cite: 50].</li>
+                <li><strong>Sistem Operasi (OS):</strong> Seperangkat program yang mengkoordinasikan seluruh aktivitas di antara perangkat keras komputer atau perangkat seluler[cite: 50].</li>
+                <li><strong>Bentuk Distribusi Perangkat Lunak:</strong> <em>Retail, Custom, Web app, Mobile app, Mobile web app, Shareware, Freeware, Open source,</em> dan <em>Domain public</em>[cite: 50].</li>
             </ul>
         </li>
-        <li><strong>Security Tools:</strong>
+
+        <li><strong>2. Productivity Applications (Aplikasi Produktivitas):</strong>
             <ul>
-                <li><strong>Personal firewall</strong> mendeteksi dan melindungi komputer dari instruksi yang tidak sah.</li>
-                <li><strong>Antivirus program</strong> mengidentifikasi dan menghapus virus di memori atau penyimpanan.</li>
-                <li><strong>Spyware/adware remover</strong> membantu menemukan dan menghapus spyware serta adware.</li>
-                <li><strong>Anti-spam programs</strong> menyaring pesan spam; <strong>web filtering software</strong> membatasi akses ke konten web tertentu.</li>
-                <li><strong>Phishing filters</strong> membantu mendeteksi situs atau pesan phishing, sedangkan <strong>pop-up/pop-under blockers</strong> mencegah jendela iklan yang tidak diinginkan.</li>
+                <li>Membantu pengguna menjadi lebih efektif dan efisien dalam melakukan aktivitas sehari-hari di tempat kerja, sekolah, maupun rumah[cite: 51].</li>
+                <li>Jenis-jenis aplikasi produktivitas meliputi:
+                    <ul>
+                        <li><strong>Word processing:</strong> Pengolahan kata untuk dokumen teks.</li>
+                        <li><strong>Presentation:</strong> Pembuatan media presentasi visual.</li>
+                        <li><strong>Spreadsheet:</strong> Pengolahan data angka, tabel, dan rumus matematis.</li>
+                        <li><strong>Database:</strong> Pengelolaan kumpulan data terstruktur.</li>
+                        <li><strong>Note taking:</strong> Pencatatan digital.</li>
+                        <li><strong>Calendar and contact management:</strong> Manajemen jadwal dan kontak.</li>
+                        <li><strong>Project management:</strong> Pengelolaan dan penjadwalan proyek.</li>
+                        <li><strong>Accounting & Personal finance:</strong> Pengelolaan keuangan bisnis maupun pribadi.</li>
+                        <li><strong>Legal & Tax preparation:</strong> Dokumen hukum dan persiapan perhitungan pajak.</li>
+                        <li><strong>Document management & Enterprise computing:</strong> Pengelolaan dokumen skala besar untuk kebutuhan perusahaan[cite: 51].</li>
+                    </ul>
+                </li>
             </ul>
         </li>
-        <li><strong>File, Disk, and System Management Tools:</strong>
+
+        <li><strong>3. Graphics and Media Applications:</strong>
             <ul>
-                <li><strong>File manager</strong> mengatur file dan folder; <strong>search tool</strong> mencari file; <strong>image viewer</strong> menampilkan gambar.</li>
-                <li><strong>Uninstaller</strong> menghapus program. <strong>Disk cleanup</strong> menghapus file yang tidak penting.</li>
-                <li><strong>Disk defragmenter</strong> mengatur ulang file dan ruang kosong agar hard disk bekerja lebih cepat.</li>
-                <li><strong>Screen saver</strong> menampilkan gambar atau animasi ketika komputer tidak digunakan.</li>
-                <li><strong>File compression tool</strong> memperkecil ukuran file; <strong>PC maintenance tool</strong> membantu pemeliharaan komputer.</li>
-                <li><strong>Backup tool</strong> menyalin file ke lokasi lain; <strong>restore tool</strong> mengembalikan file cadangan ke bentuk semula.</li>
+                <li>Perangkat lunak yang berfokus pada pengolahan visual, audio, dan multimedia, meliputi:
+                    <ul>
+                        <li><strong>Computer-aided design (CAD) software:</strong> Perangkat lunak desain teknik/arsitektur[cite: 52].</li>
+                        <li><strong>Desktop publishing software:</strong> Tata letak halaman cetak/publikasi[cite: 52].</li>
+                        <li><strong>Paint/Image editing software:</strong> Pembuatan dan pengeditan gambar digital[cite: 52].</li>
+                        <li><strong>Photo editing and photo management software:</strong> Pengeditan dan pengelolaan galeri foto[cite: 52].</li>
+                        <li><strong>Video and audio editing software:</strong> Penyuntingan berkas suara dan video[cite: 52].</li>
+                        <li>Penciptaan multimedia/situs web, pemutar media, serta pembakaran disk (*disc burning*)[cite: 48].</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><strong>4. Personal Interests Applications (Aplikasi Minat Pribadi):</strong>
+            <ul>
+                <li>Aplikasi pendukung gaya hidup (*lifestyle*), kesehatan (*medical*), hiburan (*entertainment*), kenyamanan (*convenience*), dan pendidikan (*education*)[cite: 52].</li>
+            </ul>
+        </li>
+
+        <li><strong>5. Communications Applications:</strong>
+            <ul>
+                <li>Perangkat lunak yang memfasilitasi komunikasi antar pengguna, meliputi: <em>Blog, Web Browsing, Chat, Online Discussion, Email, File Transfer, Internet Phone, Instant Messaging, Mobile Messaging, Video conference,</em> dan <em>Web Feeds</em>[cite: 52].</li>
+            </ul>
+        </li>
+
+        <li><strong>6. Security Tools (Alat Keamanan):</strong>
+            <ul>
+                <li><strong>Personal Firewall:</strong> Alat keamanan yang mendeteksi dan melindungi komputer beserta datanya dari akses atau gangguan tidak sah[cite: 52, 54].</li>
+                <li><strong>Antivirus:</strong> Melindungi komputer dari virus, worm, trojan, dan spyware dengan cara mengidentifikasi serta menghapusnya dari memori atau media penyimpanan[cite: 53].</li>
+                <li><strong>Tanda Infeksi Virus:</strong> Muncul pesan/gambar tak biasa, suara acak, memori cepat habis, file hilang/berubah ukuran secara misterius, file korup, properti sistem berubah, hingga komputer melambat drastis[cite: 53].</li>
+                <li><strong>Spyware & Adware Remover:</strong> Program untuk mendeteksi dan menghapus program pengumpul data tersembunyi (*spyware*) serta penampil iklan mengganggu (*adware*)[cite: 53, 54].</li>
+                <li>Alat keamanan tambahan lainnya: <em>Anti-spam programs, Web filtering software, Phishing filters,</em> serta <em>Pop-up and pop-under blockers</em>[cite: 54].</li>
+            </ul>
+        </li>
+
+        <li><strong>7. File, Disk, and System Management Tools:</strong>
+            <ul>
+                <li>Berbagai utilitas sistem untuk mengoptimalkan kinerja perangkat, meliputi:
+                    <ul>
+                        <li><strong>File manager:</strong> Mengelola file dan folder[cite: 54].</li>
+                        <li><strong>Search tool:</strong> Pencarian data[cite: 54].</li>
+                        <li><strong>Image viewer:</strong> Menampilkan pratinjau gambar[cite: 54].</li>
+                        <li><strong>Uninstaller:</strong> Menghapus bersih aplikasi terinstal[cite: 54].</li>
+                        <li><strong>Disk cleanup & Disk defragmenter:</strong> Membersihkan sampah sistem dan merapikan fragmentasi data disk[cite: 54].</li>
+                        <li><strong>Screen saver:</strong> Pelindung layar aktif[cite: 54].</li>
+                        <li><strong>File compression:</strong> Memadatkan ukuran file[cite: 54].</li>
+                        <li><strong>PC maintenance tool:</strong> Perawatan rutin performa PC[cite: 54].</li>
+                        <li><strong>Back up and restore tool:</strong> Pencadangan dan pemulihan data[cite: 54].</li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>
@@ -451,51 +617,195 @@
 
 <!-- Konten Rangkuman Materi 5 -->
 <div id="materi5" class="content-box" hidden>
-    <h3>Materi 5 - Digital Security, Ethics, and Privacy</h3>
+    <h3>Modul 05 - Digital Security, Ethics, dan Privacy</h3>
     <ul>
-        <li><strong>Digital Security Risks:</strong> Setiap peristiwa atau tindakan yang dapat menyebabkan kehilangan atau kerusakan pada perangkat keras, perangkat lunak, data, atau kemampuan pemrosesan. <strong>Computer crime</strong> adalah tindakan ilegal yang melibatkan komputer, sedangkan <strong>cybercrime</strong> adalah tindakan ilegal berbasis online atau Internet.</li>
-        <li><strong>Cybercriminals Types:</strong> Pelaku kejahatan digital dapat berupa hacker, cracker, script kiddie, corporate spies, unethical employees, cyberextortionist, dan cyberterrorist.</li>
-        <li><strong>Internet and Network Attacks:</strong>
+        <li><strong>1. Risiko Keamanan Digital (Digital Security Risks):</strong>
             <ul>
-                <li><strong>Malware (malicious software)</strong> adalah program yang mengubah operasi perangkat tanpa izin. Jenisnya meliputi virus, worm, Trojan horse, rootkit, spyware, dan adware.</li>
-                <li><strong>Botnet</strong> adalah kelompok komputer terkompromi (zombie) yang terhubung ke jaringan.</li>
-                <li><strong>DoS/DDoS attack</strong> mengganggu akses ke layanan Internet; <strong>back door</strong> melewati kontrol keamanan.</li>
-                <li><strong>Spoofing</strong> membuat transmisi jaringan tampak sah.</li>
-                <li><strong>Firewall</strong> melindungi sumber daya jaringan dari intrusi.</li>
+                <li><strong>Pengertian:</strong> Kejadian atau tindakan yang dapat menyebabkan hilangnya atau kerusakan pada perangkat keras, perangkat lunak, data, informasi, atau kemampuan operasional komputer dan perangkat seluler[cite: 58]. Tindakan ilegal yang melibatkan komputer disebut kejahatan komputer, sedangkan *cybercrime* adalah tindakan ilegal berbasis online/internet[cite: 58].</li>
+                <li><strong>Jenis Pelaku / Ancaman Keamanan:</strong>
+                    <ul>
+                        <li><strong>Hacker:</strong> Seseorang dengan keahlian sistem komputer dan pemrograman[cite: 58, 59]. Dikelompokkan menjadi 5 jenis: <em>White Hat Hacker</em> (penguji sistem beretika/konsultan), <em>Black Hat Hacker</em> / <em>Cracker</em> (perusak sistem dan pencuri data), <em>Grey Hat Hacker</em> (memiliki standar etika ganda), <em>Script Kiddie</em> (pemula yang menggunakan *tools* buatan orang lain), dan <em>Hacktivist</em> (penyebar pesan politis/ideologi melalui *deface*)[cite: 59, 60].</li>
+                        <li><strong>Corporate Spies:</strong> Mata-mata perusahaan yang melakukan akses ilegal untuk mengetahui kelemahan rival bisnis[cite: 60].</li>
+                        <li><strong>Unethical Employee:</strong> Karyawan tidak beretika yang mencuri data perusahaan secara diam-diam untuk keuntungan pribadi atau balas dendam[cite: 60].</li>
+                        <li><strong>Cyberextortionist:</strong> Pihak yang mengancam individu atau organisasi lewat email dan meminta tebusan uang[cite: 61].</li>
+                        <li><strong>Cyberterrorist:</strong> Orang yang merusak komputer atau infrastruktur vital negara (seperti sistem penerbangan, pembangkit listrik, telekomunikasi) karena alasan politik[cite: 61].</li>
+                    </ul>
+                </li>
             </ul>
         </li>
-        <li><strong>Unauthorized Access and Use:</strong> Akses tanpa izin atau penggunaan komputer untuk aktivitas ilegal. Pencegahan mencakup <strong>acceptable use policy</strong>, menonaktifkan file/printer sharing yang tidak diperlukan, dan menerapkan access controls.
+
+        <li><strong>2. Serangan Internet dan Jaringan (Internet and Network Attacks):</strong>
             <ul>
-                <li>Access control dapat memakai user name, password, passphrase, PIN, possessed object, dan biometric device.</li>
-                <li>Biometric device dapat memverifikasi fingerprint, face/iris recognition, hand geometry, serta voice/signature.</li>
-                <li><strong>Two-step verification</strong> menggunakan dua metode secara berurutan untuk memverifikasi identitas.</li>
-                <li><strong>Digital forensics</strong> digunakan untuk menemukan dan menganalisis bukti digital.</li>
+                <li>Informasi yang dikirimkan melalui jaringan memiliki risiko keamanan yang lebih tinggi daripada data yang tersimpan lokal[cite: 61].</li>
+                <li><strong>Malware (Malicious Software):</strong> Program berbahaya yang beroperasi tanpa sepengetahuan pengguna untuk mengubah fungsi sistem[cite: 61]. Jenis-jenisnya meliputi:
+                    <ul>
+                        <li><strong>Virus:</strong> Program yang menggandakan diri dengan menyisipkan salinan ke program atau dokumen lain[cite: 61, 62].</li>
+                        <li><strong>Worm:</strong> Menggandakan diri secara terus-menerus melalui jaringan (LAN/WAN/Internet) tanpa campur tangan pengguna hingga menghabiskan ruang *hard disk*, memori, dan *bandwidth*[cite: 62].</li>
+                        <li><strong>Trojan Horse:</strong> Program penyamar yang mencuri informasi rahasia (seperti *password* dan data) serta memberikan hak akses kendali kepada pihak luar[cite: 62].</li>
+                        <li><strong>Rootkit:</strong> Aplikasi tersembunyi yang memberikan akses penuh tidak sah kepada penyerang atas komputer korban[cite: 62].</li>
+                        <li><strong>Spyware:</strong> Program yang diam-diam menghimpun informasi pengguna saat online dan mengirimkannya ke pihak tak bertanggung jawab[cite: 62].</li>
+                        <li><strong>Adware:</strong> Program yang otomatis menginstal diri dan menampilkan iklan *pop-up* mengganggu saat pengguna berselancar di internet[cite: 62].</li>
+                    </ul>
+                </li>
+                <li><strong>Serangan Jaringan Lainnya:</strong>
+                    <ul>
+                        <li><strong>Botnet:</strong> Sekelompok komputer/perangkat terkompromi yang dikenal sebagai *zombie* dan terhubung ke jaringan[cite: 63].</li>
+                        <li><strong>Serangan DoS (Denial of Service):</strong> Serangan penolakan layanan yang mengganggu akses internet suatu sistem[cite: 63].</li>
+                        <li><strong>Back Door:</strong> Program atau instruksi tersembunyi untuk memotong kontrol keamanan sistem[cite: 63].</li>
+                        <li><strong>Spoofing:</strong> Teknik menyamar agar transmisi jaringan atau internet tampak sah/akurat[cite: 63].</li>
+                    </ul>
+                </li>
+                <li><strong>Firewall:</strong> Perangkat keras dan/atau perangkat lunak yang berfungsi melindungi sumber daya jaringan dari gangguan luar[cite: 64].</li>
             </ul>
         </li>
-        <li><strong>Software & Information Theft:</strong>
+
+        <li><strong>3. Pencurian Perangkat Lunak (Software Theft):</strong>
             <ul>
-                <li><strong>Software theft</strong> terjadi ketika seseorang mencuri media, sengaja menghapus program, atau menyalin perangkat lunak secara ilegal. Pencegahan dapat menggunakan product activation dan license agreement.</li>
-                <li><strong>Information theft</strong> dapat diatasi dengan <strong>encryption</strong> (mengubah data menjadi karakter sandi), <strong>digital signature</strong> (kode terenkripsi untuk memverifikasi pengirim), dan <strong>digital certificate</strong> (menjamin bahwa situs web sah atau secure site).</li>
+                <li>Terjadi saat seseorang mencuri media perangkat lunak, sengaja menghapus program, mendaftarkan/mengaktifkan program secara ilegal, atau menyalin program tanpa izin[cite: 64].</li>
+                <li><strong>Aktivasi Produk (Product Activation):</strong> Proses verifikasi online atau via telepon menggunakan nomor identifikasi produk untuk memastikan software tidak diinstal melebihi batas lisensi[cite: 64].</li>
+                <li><strong>License Agreement:</strong> Ketentuan hukum hak penggunaan perangkat lunak (contoh lisensi *single-user* memperbolehkan instalasi di satu perangkat dan satu salinan cadangan, serta melarang instalasi di jaringan lab sekolah atau diperjualbelikan tanpa menghapus versi asal)[cite: 64, 65].</li>
             </ul>
         </li>
-        <li><strong>Ethics and Society:</strong> <strong>Technology ethics</strong> adalah panduan moral untuk penggunaan teknologi.
+
+        <li><strong>4. Etika Teknologi (Technology Ethics):</strong>
             <ul>
-                <li><strong>Information accuracy:</strong> Tidak semua informasi di Internet benar, sehingga informasi perlu diperiksa sebelum dipercaya atau dibagikan.</li>
-                <li><strong>Intellectual property rights:</strong> Hak atas karya unik seperti ide, seni, dan logo, yang dilindungi antara lain melalui copyright dan digital rights management (DRM).</li>
-                <li><strong>Code of conduct:</strong> Pedoman tertulis yang menetapkan perilaku etis.</li>
-                <li><strong>Green computing:</strong> Upaya mengurangi limbah listrik dan dampak terhadap lingkungan saat menggunakan teknologi.</li>
+                <li>Pedoman moral yang mengatur penggunaan komputer, perangkat bergerak, dan sistem informasi[cite: 65].</li>
+                <li><strong>Kekayaan Intelektual (Intellectual Property):</strong> Karya unik dan orisinil (gagasan, seni, tulisan, logo) yang dilindungi oleh hak cipta (*copyrights*) dan strategi manajemen hak digital (*DRM / Digital Rights Management*) untuk mencegah penyebaran ilegal[cite: 65].</li>
+                <li><strong>Code of Conduct (Kode Etik):</strong> Pedoman tertulis organisasi/perusahaan yang menetapkan batasan perilaku etis dalam pemanfaatan teknologi (misalnya tidak menggunakan teknologi untuk mencuri, merugikan orang lain, melanggar hak cipta, atau mengintip file orang lain)[cite: 65, 66].</li>
+                <li><strong>Green Computing:</strong> Upaya mengurangi konsumsi listrik dan limbah lingkungan dengan menggunakan perangkat berstandar *ENERGY STAR*, mematikan perangkat saat tidak digunakan, serta mendaur ulang komponen dan kertas[cite: 66].</li>
             </ul>
         </li>
-        <li><strong>Information Privacy:</strong> Hak individu atau perusahaan untuk membatasi pengumpulan data tentang dirinya.
+
+        <li><strong>5. Privasi (Information Privacy):</strong>
             <ul>
-                <li><strong>Cookie</strong> adalah file teks kecil yang dapat digunakan untuk personalisasi, menyimpan password, melacak aktivitas, dan menargetkan iklan.</li>
-                <li>Ancaman privasi meliputi <strong>phishing</strong> (email palsu untuk mencuri data finansial), <strong>clickjacking</strong> (objek yang diklik berisi program jahat), spyware, adware, dan <strong>social engineering</strong> (memanfaatkan sifat percaya manusia).</li>
-                <li>Perlindungan privasi dapat didukung oleh hukum privasi data dan pembatasan employee monitoring oleh pemberi kerja.</li>
+                <li>Hak individu atau perusahaan untuk membatasi pengumpulan, penggunaan, dan penyebaran informasi pribadi[cite: 66].</li>
+                <li><strong>Cookies:</strong> File teks kecil yang disimpan oleh server web di komputer pengguna untuk keperluan personalisasi, menyimpan *password*, membantu belanja online, dan menargetkan iklan[cite: 67].</li>
+                <li><strong>Ancaman Privasi Lainnya:</strong>
+                    <ul>
+                        <li><strong>Phishing:</strong> Penipuan pengiriman email palsu untuk mencuri data pribadi dan finansial pengguna[cite: 68].</li>
+                        <li><strong>Clickjacking:</strong> Objek yang dapat diklik di situs web ternyata menyembunyikan program jahat[cite: 68].</li>
+                        <li><strong>Social Engineering:</strong> Memanfaatkan sifat percaya atau kenaifan korban untuk mendapatkan akses dan informasi rahasia[cite: 68].</li>
+                        <li><strong>Employee Monitoring:</strong> Penggunaan perangkat teknologi atau kamera oleh perusahaan untuk memantau aktivitas kerja karyawan[cite: 68].</li>
+                        <li><strong>Content & Web Filtering:</strong> Proses penyaringan untuk membatasi akses ke situs web atau materi tertentu[cite: 68].</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+  
+<!-- Tombol Materi 6 -->
+<button type="button" class="materi-btn" aria-controls="materi6" aria-expanded="false" onclick="toggleMateri('materi6')">
+    Materi 6
+    <div class="sub-text">Komponen Komputer & Representasi Data</div>
+</button>
+
+<!-- Konten Rangkuman Materi 6 -->
+<div id="materi6" class="content-box" hidden>
+    <h3>Modul 6 - Komponen Komputer dan Representasi Data</h3>
+    <ul>
+        <li><strong>1. Komponen Komputer dalam Casing:</strong>
+            <ul>
+                <li>Casing berisi perangkat elektronik komputer desktop, laptop, atau perangkat seluler dan berfungsi melindungi perangkat keras dari kerusakan fisik[cite: 3].</li>
+                <li><strong>Motherboard:</strong> Papan sirkuit utama tempat terintegrasinya komponen-komponen komputer lainnya seperti RAM, prosesor, slot ekspansi, serta baterai CMOS[cite: 3].</li>
+                <li><strong>Processor (Central Processing Unit / CPU):</strong> Menafsirkan dan melaksanakan instruksi dasar pengoperasian komputer[cite: 4]. Terbagi atas dua unit utama[cite: 4]:
+                    <ul>
+                        <li><em>Control Unit (Unit Kontrol):</em> Mengarahkan dan mengkoordinasikan sebagian besar operasi dalam sistem komputer[cite: 5]. Siklus mesinnya meliputi tahapan <strong>Fetch, Decode, Execute,</strong> dan <strong>Store</strong>[cite: 5].</li>
+                        <li><em>Arithmetic Logic Unit (ALU):</em> Melakukan empat operasi aritmatika dasar (penjumlahan/ADD, pengurangan/SUB, perkalian/MUL, pembagian/DIV) serta operasi perbandingan dan logika[cite: 5, 13].</li>
+                    </ul>
+                </li>
+                <li><strong>Fitur & Pendingin Prosesor:</strong> Memiliki *Multi-core processor* (chip dengan dua atau lebih inti terpisah)[cite: 4], *Register* (penyimpanan instruksi sementara)[cite: 5], serta *System Clock* (mengontrol waktu operasi komputer dengan kecepatan diukur dalam Gigahertz/GHz)[cite: 5]. Karena menghasilkan panas, prosesor membutuhkan komponen pendingin seperti *heat sink fan* atau *cooling pad*[cite: 5].</li>
+                <li><strong>Memory:</strong> Komponen elektronik penampung tiga kategori item dasar: sistem operasi/program, aplikasi, dan data yang sedang diproses[cite: 6]. Ukuran memori diukur dalam GB atau TB, di mana setiap lokasi memori memiliki alamat tersendiri[cite: 6]. Terbagi menjadi dua kategori[cite: 6, 7]:
+                    <ul>
+                        <li><em>Volatile Memory:</em> Bersifat sementara dan data hilang bila aliran listrik terputus[cite: 6]. Contoh utama adalah <strong>RAM</strong>[cite: 6]. Jenis RAM meliputi SRAM dan DRAM[cite: 8], dengan variasi DRAM meliputi SDRAM, DDR SDRAM, DDR2, DDR3, DDR4, hingga RDRAM[cite: 8]. Memori ini juga dilengkapi <strong>Memory Cache</strong> (L1, L2, L3) untuk mempercepat kinerja prosesor[cite: 8].</li>
+                        <li><em>Non-Volatile Memory:</em> Bersifat permanen dan data tetap ada meski tanpa arus listrik[cite: 7]. Contohnya adalah <strong>ROM</strong> (penyimpanan permanen)[cite: 9], <strong>Flash Memory</strong> (dapat dihapus/diprogram ulang secara elektronik)[cite: 9], dan <strong>CMOS</strong> (menggunakan baterai untuk menyimpan konfigurasi sistem saat mati)[cite: 9].</li>
+                    </ul>
+                </li>
+                <li><strong>Waktu Akses Memori (Access Time):</strong> Waktu yang dibutuhkan prosesor untuk membaca data dalam memori[cite: 9], diukur dalam satuan kecepatan seperti *millisecond* (ms), *microsecond* ($\mu$s), *nanosecond* (ns), dan *picosecond* (ps)[cite: 9].</li>
+                <li><strong>Adapter Card:</strong> Kartu eksternal yang dipasang pada *expansion slot* di motherboard untuk memberikan/memperluas koneksi ke perangkat lain[cite: 10]. Contoh tipe adapter meliputi <em>Bluetooth, MIDI, Modem, Network card, Sound card, TV tuner, USB adapter, Video card,</em> dan <em>Video capture card</em>[cite: 10]. Fitur *Plug and Play* memungkinkan sistem langsung mengenali adapter baru[cite: 10].</li>
+                <li><strong>Power Supply & Baterai:</strong> Desktop power supply maupun laptop AC adapter berfungsi mengubah arus AC listrik rumah menjadi arus DC[cite: 11]. Perangkat portable menggunakan baterai recharge berjenis *Lithium Ion*[cite: 12].</li>
+            </ul>
+        </li>
+        <li><strong>2. Representasi Data dan Sistem Bilangan:</strong>
+            <ul>
+                <li>Komputer hanya mengenali sinyal elektronik biner, sehingga pemrosesan data oleh ALU mesin menggunakan sistem basis bilangan yang berbeda dengan manusia[cite: 13].</li>
+                <li><strong>Sistem Bilangan Utama:</strong>
+                    <ul>
+                        <li><em>Desimal (Basis 10 / DEC):</em> Digunakan oleh manusia, terdiri dari 10 digit (0 sampai 9)[cite: 13].</li>
+                        <li><em>Biner (Basis 2 / BIN / Bit):</em> Bahasa mesin yang hanya terdiri dari dua angka (0 dan 1), umumnya digunakan dalam komunikasi data[cite: 13].</li>
+                        <li><em>Oktal / Oktadesimal (Basis 8 / OCT):</em> Terdiri dari angka 0 sampai 7, biasa digunakan dalam pengalamatan memori[cite: 13].</li>
+                        <li><em>Heksadesimal (Basis 16 / HEX):</em> Terdiri dari 10 angka (0–9) dan 6 huruf (A–F yang mewakili nilai 10–15), digunakan untuk pengalamatan memori dan pengkodean warna[cite: 13, 14].</li>
+                    </ul>
+                </li>
+                <li><strong>Konversi Sistem Bilangan:</strong>
+                    <ul>
+                        <li><em>Ke Desimal:</em> Konversi dari biner, oktal, atau heksadesimal ke desimal dilakukan dengan menjumlahkan hasil kali tiap digit dengan basis berpangkat urutan posisi ($2^i, 8^i, 16^i$)[cite: 14, 15].</li>
+                        <li><em>Dari Desimal Ke Basis Lain:</em> Dilakukan dengan metode pembagian berulang terhadap basis tujuan (dibagi 2, 8, atau 16) sampai habis, kemudian mencatat sisa pembagian dari sisa terakhir (Most Significant Bit/Digit - MSB/MSD) hingga sisa pertama (Least Significant Bit/Digit - LSB/LSD)[cite: 15].</li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>
 </div>
 
+<!-- Tombol Materi 7 -->
+<button type="button" class="materi-btn" aria-controls="materi7" aria-expanded="false" onclick="toggleMateri('materi7')">
+    Materi 7
+    <div class="sub-text">Sistem Input-Output (I/O) Komprehensif</div>
+</button>
+
+<!-- Konten Rangkuman Materi 7 -->
+<div id="materi7" class="content-box" hidden>
+    <h3>Modul 7 - Sistem Input-Output (I/O) Komprehensif</h3>
+    <ul>
+        <li><strong>1. Komponen dan Konsep Dasar Sistem I/O:</strong>
+            <ul>
+                <li>Sistem Input-Output (I/O) berfungsi sebagai gerbang atau jangkauan penghubung antara sistem pemrosesan internal komputer (CPU dan memori utama) dengan dunia luar (pengguna, perangkat penyimpanan, sensor, aktuator, atau sistem lain).</li>
+                <li><strong>Input (Masukan):</strong> Data, sinyal, atau instruksi mentah yang dikirim dari perangkat luar ke dalam sistem komputer untuk diproses lebih lanjut oleh CPU.</li>
+                <li><strong>Output (Keluaran):</strong> Hasil pemrosesan data dari sistem komputer yang dikirim keluar untuk disajikan kepada pengguna secara visual/audio atau untuk mengontrol perangkat fisik di dunia nyata.</li>
+                <li><strong>Arsitektur Dasar:</strong> Alur interaksi melibatkan CPU, memori utama, dan bus sistem yang terhubung ke modul I/O, di mana modul I/O bertindak sebagai perantara cerdas agar CPU tidak terbebani langsung oleh karakteristik perangkat keras luar yang lambat.</li>
+            </ul>
+        </li>
+        <li><strong>2. Modul I/O (*I/O Controller / Interface*) dan Fungsinya:</strong>
+            <ul>
+                <li>Modul I/O adalah papan sirkuit atau chip antarmuka yang berada di antara bus sistem dan perangkat eksternal dengan fungsi utama mengelola komunikasi dua arah.</li>
+                <li><strong>Kontrol dan Timing:</strong> Mengatur jalannya koordinasi alur kerja serta sinkronisasi waktu pertukaran data antara CPU, memori, dan perangkat perifer.</li>
+                <li><strong>Komunikasi CPU:</strong> Meliputi proses arbitrase bus, penerimaan alamat (*addressing*), dan penerjemahan perintah kontrol dari CPU.</li>
+                <li><strong>Komunikasi Perangkat:</strong> Mengirimkan sinyal perintah, status, dan pertukaran data fisik ke perangkat eksternal terkait.</li>
+                <li><strong>Buffering Data:</strong> Menyimpan data sementara (*buffer*) untuk menjembatani perbedaan kecepatan yang sangat drastis antara CPU yang sangat cepat dengan perangkat I/O yang relatif lambat.</li>
+                <li><strong>Deteksi Error:</strong> Berperan mendeteksi kesalahan transmisi data (seperti menggunakan bit paritas atau *Cyclic Redundancy Check* / CRC) untuk menjaga integritas data.</li>
+            </ul>
+        </li>
+        <li><strong>3. Perangkat Eksternal (Periferal):</strong>
+            <ul>
+                <li><em>Human Readable (Dibaca Manusia):</em> Perangkat yang dirancang untuk komunikasi langsung dengan pengguna. Contoh meliputi <strong>Keyboard, Mouse, Monitor, Touchscreen, Printer, dan Scanner</strong>.</li>
+                <li><em>Machine Readable (Dibaca Mesin):</em> Perangkat yang digunakan untuk komunikasi otomatis dengan peralatan mesin atau sistem kontrol industri. Contoh meliputi <strong>Sensor suhu/kelembapan, aktuator, disk drive (HDD/SSD), dan Network Interface Card (NIC)</strong>.</li>
+                <li><em>Communication (Komunikasi):</em> Perangkat yang memfasilitasi pertukaran data jarak jauh antar sistem komputer. Contoh meliputi <strong>Modem, Router, Switch, dan Bluetooth transceiver</strong>.</li>
+            </ul>
+        </li>
+        <li><strong>4. Teknik dan Metode Operasi I/O:</strong>
+            <ul>
+                <li><strong>Programmed I/O (I/O Terprogram):</strong> CPU mengeluarkan perintah I/O secara langsung dan terus-menerus memantau (<em>polling / busy-wait</em>) status perangkat I/O sampai siap. Metode ini sangat sederhana namun boros waktu CPU.</li>
+                <li><strong>Interrupt-Driven I/O (I/O Berbasis Interupsi):</strong> CPU dapat mendelegasikan tugas dan leluasa mengerjakan proses lain. Perangkat I/O akan mengirimkan sinyal interupsi (<em>interrupt request</em>) ke CPU begitu data siap dikirim atau diterima, sehingga efisiensi waktu meningkat drastis.</li>
+                <li><strong>Direct Memory Access (DMA):</strong> Digunakan untuk transfer data berukuran besar (seperti pembacaan/penulisan *Hard Drive* atau SSD) secara langsung antara perangkat I/O dan memori utama menggunakan chip *DMA Controller* khusus tanpa membebani siklus kerja CPU.</li>
+            </ul>
+        </li>
+        <li><strong>5. Pemetaan I/O (*I/O Addressing*) dan Ruang Alamat:</strong>
+            <ul>
+                <li><strong>Memory-Mapped I/O (MMIO):</strong> Ruang alamat memori fisik dan ruang alamat I/O digabung menjadi satu kesatuan ruang alamat tunggal. Perangkat I/O diberi alamat memori khusus sehingga instruksi akses memori standar (seperti <code>LOAD</code> dan <code>STORE</code>) dapat digunakan.</li>
+                <li><strong>Isolated / Port-Mapped I/O:</strong> Ruang alamat memori utama dan ruang alamat I/O dipisah secara terpisah total, serta menggunakan instruksi khusus kendali I/O (seperti instruksi <code>IN</code> dan <code>OUT</code> pada arsitektur x86) tanpa memakan kapasitas ruang memori utama.</li>
+            </ul>
+        </li>
+        <li><strong>6. Aspek Kinerja, *Bottleneck*, dan Optimalisasi Sistem I/O:</strong>
+            <ul>
+                <li><strong>Masalah Bottleneck:</strong> Penurunan kinerja sistem komputer modern paling sering terjadi bukan pada kecepatan inti CPU, melainkan pada hambatan kecepatan transfer data di jalur I/O (*Disk I/O* dan *Network I/O*).</li>
+                <li><strong>Buffering & Caching:</strong> Teknik menampung atau menyimpan data yang sering diakses ke dalam memori cepat (*cache*) untuk menghindari pembacaan berulang ke media fisik yang lambat.</li>
+                <li><strong>Asynchronous I/O (Async/Await):</strong> Mekanisme pemrograman yang mengizinkan sistem mengirim permintaan I/O dan langsung melanjutkan eksekusi tugas lain tanpa harus menunggu proses I/O selesai sepenuhnya.</li>
+                <li><strong>Spooling (Simultaneous Peripheral Operations On-Line):</strong> Teknik penampungan antrean data I/O sementara (misalnya antrean dokumen cetak pada printer) ke dalam *disk* sistem agar perangkat pengirim tidak perlu menunggu perangkat tujuan menyelesaikan tugasnya satu per satu.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
      <!-- Contact Section -->
 <section id="contact" class="py-16 px-6 max-w-xl mx-auto relative z-10 text-center">
@@ -524,22 +834,6 @@
         © 2026 Amjad Dhiya Ulhaq Zamri. Built with Space Theme.
     </footer>
 
-    <div id="memory-game-modal" class="memory-modal" role="dialog" aria-modal="true" aria-labelledby="memory-game-title" aria-describedby="memory-game-status" hidden>
-        <div class="memory-game-panel">
-            <button id="memory-game-close" class="memory-game-close" type="button" aria-label="Tutup Memory Game">×</button>
-            <h2 id="memory-game-title" class="memory-game-title">Pattern Memory</h2>
-            <p id="memory-game-level" class="memory-game-level">Level: 1 / 50</p>
-            <p id="memory-game-status" class="memory-game-status" aria-live="polite">Perhatikan urutan kotak, lalu ulangi dengan mengetuknya.</p>
-            <div class="memory-game-board" aria-label="Papan permainan">
-                <button class="memory-tile memory-tile-red" type="button" data-tile="0" aria-label="Merah" disabled></button>
-                <button class="memory-tile memory-tile-blue" type="button" data-tile="1" aria-label="Biru" disabled></button>
-                <button class="memory-tile memory-tile-green" type="button" data-tile="2" aria-label="Hijau" disabled></button>
-                <button class="memory-tile memory-tile-yellow" type="button" data-tile="3" aria-label="Kuning" disabled></button>
-            </div>
-            <button id="memory-game-restart" class="memory-game-restart" type="button" hidden>Ulangi dari Level 1</button>
-        </div>
-    </div>
-
         <script>
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
@@ -554,7 +848,7 @@
     });
 
     navMenu.addEventListener('click', (event) => {
-        if (event.target.closest('a, #memory-game-trigger')) {
+        if (event.target.closest('a')) {
             navMenu.classList.add('hidden');
             navMenu.classList.remove('flex');
             hamburgerBtn.setAttribute('aria-expanded', 'false');
